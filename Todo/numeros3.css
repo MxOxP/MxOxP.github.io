@@ -1,0 +1,16 @@
+.intrucciones{
+    margin-top: -10%;
+    text-align: center;
+}
+#btnRevisar{
+    border-radius: 5px;
+}
+#respuesta{
+    margin-top: 5px;
+}
+audio{
+    display: none;
+}
+#bodyResul{
+    display: none;
+}

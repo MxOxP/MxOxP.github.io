@@ -1,0 +1,45 @@
+.span1{
+    color: #602167;
+}
+
+.modalTitle{
+    font-weight: bolder;
+}
+
+.modal-header{
+    background-color: #602167;
+    color: white;
+}
+
+.modal-footer{
+    justify-content: center !important;
+}
+
+.audioGlobo{
+    display: none;
+}
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    h2{
+        font-size: 1.6em;
+    }
+    h3{
+        font-size: 1.35em;
+    }
+    p{
+        font-size: .85rem;
+    }
+    }
+    /* // Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) and (max-width: 767.98px) {  }
+    
+    /* // Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) and (max-width: 991.98px) {  }
+    
+    /* // Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {  }
+    
+    /* // Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        
+    }
