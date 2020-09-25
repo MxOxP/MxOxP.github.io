@@ -1,0 +1,946 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    max-height: 95%;
+}
+.body-full{
+    height: 640px;
+}
+
+
+.buena{
+    background-color: #00800069;
+    color: white;
+}
+.error{
+    background-color: #ff000085;
+    color: white;
+}
+
+header{
+    height: 50px;
+    max-height: 50px;
+    background: #602167;
+    color: white;
+
+}
+
+.s8_DiVIzq {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 100%;
+}
+
+
+.s9_bot{
+    margin-left: 279px;
+    background: #602167;
+    margin-right: 29%;
+    width: 230px;
+    height: 42px;
+
+}
+
+
+.s7_DiVIzq {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 100%;
+    
+}
+.s14_DiVsDer {
+    background: #cacaca42;
+    text-align: justify;
+    border-color: #602167;
+    margin: auto;
+    border-bottom-style: ridge;
+    border-radius: 16px;
+}
+
+.s14_DiText {
+    font-size: 1.05rem;
+    background: #ffffff78;
+    border-radius: .3rem;
+    color: #000;
+    margin: auto;
+    margin-top: 4%;
+}
+
+.s14_imag {
+    margin-left: 14px;
+    max-width: 84%;
+}
+
+.s14_Di1{
+    background: #e45d52;
+}
+
+.s14_DiText2{
+margin: 30px 8px 29px 37px;
+font-size: 1.05rem;
+background: #ffffff78;
+border-radius: .3rem;
+color: #000;
+}
+
+.s14_Spa1{
+    font-size: larger;
+    color: white;
+    
+    margin-top: 10px!important;
+}
+
+.s14_DiIncentivos {
+    background: #e45d52;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.s15_imag{
+    border-radius: 27px;
+    max-width: 108%;
+}
+
+
+
+
+.s9_DiExamen{
+    color: none;
+}
+
+.s9_Lis{
+    background: red;
+}
+
+
+#s9_BotPre{
+  /*  background: #60216747;*/
+    color: black;
+    border-color: #602167;
+    border-radius: 13px;
+    font-weight: inherit;
+}
+    
+
+
+
+.DiInsenti{
+    background: #e45d52;
+}
+
+header h2{
+    padding: 5px;
+}
+
+.DaCli{
+    margin-top: 15px;
+    color: ivory;
+    font-size: 2vw;
+
+}
+
+.s13DiGen{
+    margin-top: 10px;
+}
+
+.s14_DiText1 {
+    font-size: 1.05rem;
+    background: none;
+    border-radius: .3rem;
+    margin-left: 0px;
+    color: #000;
+    margin-top: 2%;
+}
+
+
+    .DiPuntero{
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(96 33 103 / 96%);
+    }
+
+    .BtnAV{
+        background: #662a6d;
+        border: none;
+    }
+
+    .btn-danger.focus, .btn-danger:focus {
+        color: #fff;
+        background-color: black;
+        border-color: #bd2130;
+        box-shadow: 0 0 0 0.2rem rgba(225,83,97,.5);
+    }
+
+    .AlerImpo{
+        color: #000000;
+        background-color: #edd4d4;
+        border-color: #e6c3c3;
+        margin-top: 80px;
+    }
+
+    .Bt-Ejer1{
+        margin-left: 22%;
+        margin-top: 104%;
+    }
+
+
+    .DiDer{
+        margin-left: inherit;
+    }
+
+    .DiFondoPer {
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(96 33 103 / 35%);
+    }
+
+
+    .DiDes{
+        margin-top: 35px;
+    }
+   
+    .DiText1{
+        margin-top: 50px;
+    }
+
+    .DiTextIz{
+        margin-top: 35px;
+        background-color: rgb(96 33 103 / 78%);
+        border-radius: 3%;
+        max-height: 39%;
+    }
+
+    .s9_TituloPro {
+        margin-left: 53%;
+        font-size: 24px;
+    }
+
+    .s9_encuadre {
+        width: 79vw;
+        text-align: center;
+    }
+
+
+    .s9_espa1{
+        flex: 0 0 33.333333%;
+    max-width: 9.333333%;
+    }
+
+     .imSeñor{
+        width: 100%;
+
+     }
+
+
+     .s11_imag {
+        max-width: 388%;
+        margin-top: 15px;
+        margin-left: -55%;
+        border-radius: 5px;
+    }
+
+     .s11_DiText{
+       font-size: 1.05rem;
+       background: #602167;
+       border-radius: .3rem;
+       color: #fff;
+       margin-top: 3%;
+}
+
+.s7_content-body {
+    overflow: auto;
+    max-height: 991px;
+}
+  
+.s12_imag {
+    max-width: 411%;
+    margin-top: 12px;
+    margin-left: 25%;
+    border-radius: 5px;
+    
+}
+
+.s12_DiVIzq{
+    border-radius: 20px;
+    border: none;
+    background-color: none;
+    display: contents;
+    margin-left: 6%;
+}
+
+.s13_DiVsDer{
+    background: #3a426d;
+    text-align: justify;
+    margin: auto;
+    border-radius: 16px;
+
+}.s13_DiText {
+    font-size: 1.05rem;
+    background: #3a426d;
+    border-radius: .3rem;
+    color: #fff;
+    margin-top: 3%;
+}
+
+.s13_imag{
+    max-width: 84%;
+}
+
+.s13_DiText2 {
+    font-size: 1.05rem;
+    background: none;
+    border-radius: .3rem;
+    margin-left: 73px;
+    color: #fff;
+    margin-top: 3%;
+}
+
+.s13_TiEsAT {
+    margin-left: 90px;
+    font-size: 24px;
+}
+     
+     .DiPuntero{
+        border-radius: 20px;
+        border: none;
+        background-color:none;
+    }
+
+     .PropositoIns1{
+        margin-top: 15px;
+        font-size: 2vw;
+        background: #ffffffeb;
+        color: black;
+        border-radius: inherit;
+    
+    }
+
+    .PropositoIns2{
+        margin-top: 40px;
+        font-size: 2vw;
+        background: #ffffffeb;
+        color: black;
+        border-radius: inherit;
+    
+    }
+ .Bt-Ejer1{
+    background: #602167;
+
+ }
+    .TituloPro {
+        margin-left: 13%;
+        font-size: 24px;
+    }
+
+    .table-Asesor{
+        color: #fff;
+        background-color: none;
+    }
+
+    .DiOpciones{
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 5px);
+        padding: 0.375rem 5.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        background-clip: padding-box;
+        border: 3px solid #ced4da;
+        border-radius: 3.25rem;
+        margin: 15px;
+
+    }
+
+    .OpCs{
+        background: #0000004a;
+        color: black;
+    }  
+
+    #Text_Izq_1, #Text_Izq_2{
+    color: white;
+    font-size: 120%;
+    }
+
+   /* Estandar actuacion Maletero */
+
+
+    .s7_DiVsDerecho{
+        margin-top: 35px;
+        background-color: rgb(96 33 103 / 78%);
+        border-radius: 3%;
+        max-height: 51%;
+    }
+
+.w-100 {
+    width: 108%!important;
+    margin-left: -34px;
+    margin-top: -18px;
+}
+
+.content-body{
+    overflow: auto;
+    max-height: 400px;
+}
+.footer img{
+    width: 50px;
+    height: 50px;
+}
+.footer img:hover{
+    cursor: pointer;
+}
+.footer .button {
+    font-size: 30px;
+    padding: 3px 5px 2px 6px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.subtitulo{
+    background-color: rgb(219,80,73);
+    color: white;
+    font-size: 30px;
+    height: 50px;
+}
+
+.subtituloAt{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 30px;
+    height: 50px;
+}
+
+.TiEsAT {
+    margin-left: 25px;
+    font-size: 24px;
+}
+
+.DiEspacio{
+    display: inherit;
+}
+
+#Instrs{
+    font-weight: bold;
+}
+
+.instrucciones{
+    color: rgb(219,80,73);
+    font-weight: bold;
+}
+
+.descrp{
+    color: rgb(254,25,60);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.descrp span{
+    color: black;
+}
+
+.txtdescrp{
+    font-size: 14px;
+
+
+}
+.descrp2{
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.ims1{
+    width: 104px;
+    height: 104px;
+}
+
+
+.ims3{
+    width: 60px;
+    height: 60px;
+}
+
+.encuadre{
+    width: 80vw;
+}
+
+.encuadre2{
+    width: 80vw;
+    
+}
+
+.row{
+    display: flow-root;
+}
+
+.row-marg{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+.row-marg2{
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.sg1{
+        padding-right: 30px;
+}
+
+.sg2{
+        padding-left: 30px;
+}
+
+.ims2:hover{
+    cursor: pointer;
+}
+.tabs1 tbody tr td div img{
+    cursor: pointer;
+}
+
+
+.auds{
+    display: none;
+}
+
+.sels{
+    background: #343a40;
+    border-color: none;
+    color: white;
+}
+
+.table td{
+    padding: 0.4rem;
+}
+
+.audioPlay{
+    display: none;
+}
+
+
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 479.98px){
+    header h2{
+        font-size: 21px;
+    } 
+
+    .encuadre{
+        width: 38vw;
+    }
+
+    .encuadre2{
+        width: 30vw;
+    }
+
+    .sg1{
+        padding: 0px;
+    }
+    .footer img {
+        margin-top: -46px;
+    }
+
+
+    .s9_bot{
+        margin-top: 18px;
+        margin-left: 69px;
+        background: #602167;
+    }
+
+    .s9_TituloPro {
+        margin-left: 29%;
+    }
+    
+
+}
+
+
+@media (min-width: 480px) and (max-width: 575.98px) { 
+
+    .encuadre{
+        width: 50vw;
+    }
+
+    .encuadre2{
+        width: 10vw;
+    }
+
+    .sg1{
+        padding-right: 20px;
+    }
+
+    .sg2{
+        padding-left: 20px;
+    }
+
+    .glipf{
+        margin-left:  30px;
+    }
+    .w-100 {
+        width: 122%!important;
+        margin-left: -34px;
+        margin-top: -18px;
+    }
+
+    .s0_im {
+        width: 122%!important;
+        margin-left: -34px;
+        margin-top: -18px;
+        max-width: 111%;
+    }
+
+    .content-body {
+        max-height: 522px;
+    }
+    .s9_bot{
+        margin-top: 18px;
+        margin-left: 116px;
+        background: #602167;
+    }
+    .imSeñor {
+        width: 200%;
+    }
+
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 575.98px){
+    .hicons{
+        padding-left: 40px;
+    }
+
+    .sg1{
+        padding-right: 8px;
+        padding-left: 5px;
+    }
+
+    .sg2{
+        padding-left: 5px;
+    }
+    .content-body {
+        /* overflow: auto; */
+        max-height: 516px;
+    }
+ 
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .hicons{
+        padding-left: 70px;
+    } 
+
+    .encuadre{
+        width: 55vw;
+    }
+
+    .encuadre2{
+        width: 55vw;
+    }
+
+    .sg1{
+        padding-left: 20px;
+        padding-right: 15px;
+    }
+
+    .glipf{
+        margin-left:  50px;
+    }
+    .w-100 {
+        width: 113%!important;
+        margin-left: -24px;
+        margin-top: -18px;
+    }
+    .content-body {
+        overflow: inherit ;
+        max-height: 516px;
+    }
+    .s0_im {
+        width: 122%!important;
+        margin-left: -34px;
+        margin-top: -25px;
+        max-width: 111%;
+    }
+    
+    .s9_encuadre {
+        width: 79vw;
+    }
+    .s9_espa1 {
+        flex: 0 0 33.333333%;
+        max-width: 0%;
+    }
+
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .hicons{
+        padding-left: 100px;
+
+    } 
+
+    .encuadre{
+        width: 60vw;
+    }
+
+    .OpcPuntero{
+        width: 81vw;
+
+
+    }
+
+    .s9_TituloPro {
+        margin-left: 53%;
+        font-size: 24px;
+    }
+
+    .encuadre2{
+        width: 60vw;
+    }
+
+    .sg1{
+        padding-left: 80px;
+    }
+
+    .glipf{
+        margin-left:  70px;
+    }
+    .w-100 {
+        width: 113%!important;
+        margin-left: -34px;
+        margin-top: -18px;
+    }
+    .content-body {
+        overflow: auto;
+        max-height: 637px;
+    }
+ 
+    .s0_im {
+        width: 122%!important;
+        margin-left: -34px;
+        margin-top: -38px;
+        max-width: 111%;
+    }
+
+     .s9_content-body {
+      overflow: initial;
+      max-height: 679px;
+     }
+
+   
+
+    .s11_imag {
+        max-width: 388%;
+        margin-top: 15px;
+        margin-left: -55%;
+        border-radius: 5px;
+    }
+
+.s11_DiText{
+    font-size: 1.05rem;
+    background: #602167;
+    border-radius: .3rem;
+    color: #fff;
+    margin-top: 3%;
+}
+
+.imSeñor {
+    width: 620%;
+}
+.imSeñor2{
+    width: 200%;
+}
+
+.s9_bot {
+    margin-left: 146px;
+ 
+}
+.s9_espa1 {
+    
+    max-width: 3.333333%;
+}
+
+
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+    .ims2{
+        padding-left: 100px;
+    }
+
+    .encuadre{
+        width: 65vw;
+    }
+
+    .encuadre2{
+        width: 65vw;
+    }
+
+    .sg1{
+        padding-left: 80px;
+        padding-right: 30px;
+    }
+
+    .sg2{
+        padding-left: 30px;
+    }
+    .imSeñor {
+        width: 620%;
+    }
+
+    .glipf{
+        margin-left:  80px;
+    }
+    .w-100 {
+        width: 109%!important;
+        margin-left: -34px;
+        margin-top: -18px;
+    }
+    .content-body {
+        /* overflow: auto; */
+        max-height: 717px;
+    }
+
+    .DescIns{
+        margin-left: 30%;
+        font-size: 18px;
+    }
+
+    .TituloPro {
+        margin-left: 57%;
+        font-size: 28px;
+    }
+
+     /* Estandar actuacion Maletero */
+
+
+     .s7_DiVIzq {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 100%;
+        
+    }
+
+    .s8_DiVIzq {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 100%;
+    }
+
+    .s8_DiVsDerecho{
+        margin-top: 35px;
+        background-color: rgb(96 33 103 / 78%);
+        border-radius: 3%;
+        max-height: 71%;
+    }
+    .s9_espa1 {
+        flex: 0 0 33.333333%;
+        max-width: 7.333333%;
+    }
+
+    .s11_DiVIzq{
+        border-radius: 20px;
+        border: none;
+        background-color: none;
+    }
+
+    .s11_Imag {
+        max-width: 423%;
+        margin-left: -77%;
+        border-radius: 10px;
+    }
+
+     .s11_imag {
+        max-width: 388%;
+        margin-top: 15px;
+        margin-left: -55%;
+        border-radius: 5px;
+    }
+
+
+ 
+    .imSeñor {
+        width: 620%;
+    }
+
+    .s9_encuadre {
+        width: 79vw;
+    }
+
+
+
+
+
+
+
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .sg1{
+        padding-left: 15    0px;
+        padding-right: 60px;
+    }
+
+    .sg2{
+        padding-left: 60px;
+    }
+
+    .glipf{
+        margin-left:  110px;
+    }
+    .TituloPro {
+        margin-left: 58%;
+        font-size: 29px;
+    }
+    .encuadre {
+        width: 81vw;
+        margin-left: 188px;
+    }
+    .ContEjer {
+        overflow: auto;
+        max-height: 654px;
+    }
+    .s9_content-body {
+        overflow: initial;
+        max-height: 817px;
+       }
+
+     
+     .s9_bot{
+      margin-left: 279px;
+      background: #602167;
+      margin-right: 29%;
+      width: 230px;
+      height: 42px;
+
+}
+
+     .s9_espa1 {
+    flex: 0 0 33.333333%;
+    max-width: 8.333333%;
+}
+
+.imSeñor {
+    width: 620%;
+}
+
+.s9_DiExamen{
+    text-align: center;
+}
+.s9_TituloPro {
+    margin-left: 60%;
+    font-size: 24px;
+}
+
+
+}

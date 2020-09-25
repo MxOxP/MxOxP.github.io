@@ -1,0 +1,225 @@
+.MapaMaraton{
+    vertical-align: middle;
+    border-style: none;
+    width: 923px;
+    border-radius: 10%;
+    margin-left: -9%;
+    position: relative;
+}
+
+.DivBotoNDado {
+    margin-top: 35px;
+    background-color: none;
+    border-radius: 3%;
+    max-height: 51%;
+}
+
+.principal {
+    width: 100%;
+    background: black;
+    height: 15%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    text-align: center;
+}
+
+#BotonDados {
+    background: black;
+    border-radius: 14%;
+    width: 127px;
+    color: white;
+    margin-top: 14%;
+    margin-left: 16%;
+    height: 40px;
+}
+
+#dice1 {
+    background: black;
+    width: 60px;
+    color: white;
+    height: 40px;
+}
+
+#plus {
+    background: black;
+    width: 60px;
+    height: 40px;
+    color: white;
+}
+
+#dice2 {
+    background: black;
+    color: cornsilk;
+    width: 60px;
+    height: 40px;
+}
+
+#equal {
+    background: black;
+    width: 60px;
+    height: 40px;
+    color: white;
+}
+
+#sum {
+    background: black;
+    color: cornsilk;
+    width: 60px;
+    height: 40px;
+}
+
+div.dice{
+	float: left;
+    width: 35px;
+    background: none;
+    border: none;
+    padding: 0px;
+    color: white;
+    font-size: larger;
+    text-align: center;
+    margin: 5px;
+}
+
+.DivBien{
+    background: red;
+    max-width: 90%;
+}
+
+
+#MaN0{
+    max-width: 500%;
+
+}
+
+.Content-body_Maraton {
+    max-height: 100%;
+}
+
+#BoDy0{
+    height: 100%;
+}
+
+
+.DivVHola {
+    color: #000000;
+    background-color: #edd4d4;
+    border-color: #e6c3c3;
+    margin-top: 34%;
+}
+
+#TamañoLetra{
+    font-size: 366%;
+}
+
+#TamañoLetraP{
+    font-size: 200%;
+}
+
+#TamañoLetra1{
+    font-size: 250%;
+}
+
+#TamañoLetraP1{
+    font-size: 150%;
+}
+
+.DivVReglas {
+    color: #000000;
+    background-color: #edd4d4;
+    border-color: #e6c3c3;
+    margin-top: 20%;
+}
+
+#TamañoLetra2{
+    font-size: 600%;
+}
+
+.H2Inf{
+    font-size: 1rem;
+}
+
+.Ficha1{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+/*--------------------------estilo popup----------------------------*/
+
+.overlay{
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active{
+visibility: visible;
+}
+
+.popup {
+    background: #6f42c1;
+    box-shadow: 0px 0px 5px 0px rgb(255 255 255 / 75%);
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+}
+
+.popup .btn-cerrar-popup{
+font-size: 16px;
+line-height: 16px;
+display: block;
+text-align: right;
+color: #bbbbbb;
+transition: .3s ease all;
+}
+
+.popup .btn-cerrar-popup :hover{
+    color: #000000;
+}
+
+.popup h3{
+    font-size: 33px;
+   /* opacity: 0; */
+}
+
+/*.popup form .contenedor-inputs{
+    
+}*/
+
+.popup form .contenedor-inputs button{
+width: 100%;
+margin-bottom: 20px;
+height: 52px;
+line-height: 52px;
+font-size: 18px;
+text-align: center;
+border: 1px solid #BBBBBB;
+}
+
+.popup form .btn-submit{
+padding: 0 20px;
+height: 40px;
+line-height: 40px;
+border: none;
+color: #fff;
+background: #5e7de3;
+border-radius: 3px;
+font-size: 16px;
+cursor: pointer;
+transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover{
+background: rgba(94, 152, 227, .9);
+}

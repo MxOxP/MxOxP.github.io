@@ -1,0 +1,34 @@
+#suma{
+    font-size: 40px;
+}
+#suma label{
+    color: white;
+    padding: 0px 0px 0px 7px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background: #602167;
+}
+.intrucciones{
+    margin-top: 1.5%;
+}
+.intrucciones .button{
+    font-size: 32px !important;
+    padding: 1px 0px 0px 5px !important;
+}
+.content-body .button{
+    font-size: 32px;
+    padding: 1px 0px 0px 5px !important;
+}
+#sumLetras{
+    font-size: 30px;
+}
+.titleIns{
+    font-size: 20px;
+}
+#CombinedText{
+    font-size: 20px;
+}
+audio{
+    display: none;
+}

@@ -1,0 +1,45 @@
+
+.button-one {
+    font-size: 30px;
+    padding: 10px 10px 10px 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+#señor {
+    
+    width: 250px;
+    height: 250px;
+}
+
+#glob {
+             border: solid #602167;
+             background-color: white;
+            border-radius: 1000px;
+            padding: 120px;
+            padding-left: 50px;
+            padding-right: 50px;
+           margin-right: 45px;
+            margin-top: 15px;
+            text-align: justify;
+        }
+        #par{
+            border: solid #602167;
+            border-radius: 10px;
+            color: #602167;
+           padding: 10px 0px 5px 30px;
+            font-size: 18pt;
+            text-align: justify;
+        }
+        #nube {
+            background-color: lightgrey ;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        #mar {
+            margin-top: -200px;
+        }
