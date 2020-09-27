@@ -1,5 +1,7 @@
 //let btn = document.getElementById("tiro");
 let btn;
+let random = false;
+let randomnum = 0;
 let toca = 0;
 let victoria = false;
 let playe = new Object();
@@ -137,8 +139,26 @@ function detener(){
 
 function preg(player){
 	//console.log(preguntas.length);
-	let genpreg = 0 + Math.floor((25 - 0) * Math.random());
+	//Busqueda de un numero aun mas random
+	let genpreg = 0;
+	while (random != true){
+		genpreg = 0 + Math.floor((25 - 0) * Math.random());
+		let upper;
+		if(genpreg >=13){
+			upper = 1;
+		}else{
+			upper = 0;
+		}
+		if(randomnum != upper){
+			random = true;
+			randomnum = upper;
+		}
+	}
+	random = false;
+	//let genpreg = 0 + Math.floor((25 - 0) * Math.random());
+
 	bootbox.prompt(preguntas[genpreg][0], function(result){ 
+		result = result.toLowerCase();
 		if(result == preguntas[genpreg][1]){
 			botonazo(player);
 		}else{
