@@ -4,6 +4,11 @@ let random = false;
 let randomnum = 0;
 let toca = 0;
 let victoria = false;
+let array25 = [];
+for(let i = 0 ; i < 25 ; i++){
+	array25.push(i);
+}
+
 let playe = new Object();
 playe.l=0;
 playe.u="player";
@@ -140,6 +145,7 @@ function detener(){
 function preg(player){
 	//console.log(preguntas.length);
 	//Busqueda de un numero aun mas random
+	/*
 	let genpreg = 0;
 	while (random != true){
 		genpreg = 0 + Math.floor((25 - 0) * Math.random());
@@ -155,6 +161,21 @@ function preg(player){
 		}
 	}
 	random = false;
+	*/
+	//let array25 = [];
+	let genpreg = 0;
+
+	if(array25.length == 0){
+		for(let i = 0 ; i < 25 ; i++){
+			array25.push(i);
+		}
+	}else{
+		let ranm;
+		ranm = Math.floor(array25.length * Math.random());
+		genpreg = array25[ranm];
+		array25.splice(ranm,1);
+	}
+
 	//let genpreg = 0 + Math.floor((25 - 0) * Math.random());
 
 	bootbox.prompt(preguntas[genpreg][0], function(result){ 
