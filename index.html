@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
     <style>
       .map {
-        height: 2400px;
-        width: 90%;
+        height: 400px;
+        width: 400px;
       }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
@@ -55,8 +55,20 @@
   <body>
     <h2>My Map</h2>
     <div id="map" class="map"></div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <script>
+        //window.addEventListener('load',reajuste);
+        reajuste();
+        window.addEventListener('resize',reajuste);
+    </script>
 <!-- - - - - - - - - - - - - Mapa Code - - - - - - - - - - - - - - - - -->
     <script type="text/javascript">
+
+      var centerpos = [-99.12, 19.49];
+      var maxExtent = [-86.00,14.00,-118.00,33.00];
+      var newpos = ol.proj.transform(centerpos,'EPSG:4326','EPSG:900913');
+
       var map = new ol.Map({
         target: 'map',
         layers: [
@@ -64,16 +76,28 @@
             source: new ol.source.OSM()
           })
         ],
+        //---- Esto fue añadido
+        controls: ol.control.defaults({
+          attributionOptions: {
+            collapsible: true
+          }
+        }),
+        //--- Aqui acaba
         view: new ol.View({
-          center: ol.proj.fromLonLat([37.41, 8.82]),
-          zoom: 4
+          //center: ol.proj.fromLonLat([37.41, 8.82]),
+          //extent:[80.05844110726194,26.34796712822462,88.2015218371264,30.44742963310623],
+          extent: ol.proj.transformExtent(maxExtent, 'EPSG:4326', 'EPSG:900913'),
+          projection : 'EPSG:900913',
+          //center: ol.proj.fromLonLat([-99.12, 19.49]),
+          //extent:[-100, 100,-100,100],
+          center : newpos,
+          maxZoom: 8,
+          zoom: 5 
         })
-      });
+      }); 
+
     </script>
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <script>
-        window.addEventListener('resize',reajuste);
-    </script>
  
   </body>
 </html>
