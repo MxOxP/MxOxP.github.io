@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="height=device-height,initial-scale=1">
+
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css"> -->
+    <link rel ="stylesheet" href="v6.4.3/css/ol.css" type = "text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+      }
+      #ups{
+        visibility: hidden;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 400px){
+        .map{
+          visibility: hidden;
+        }
+        #ups{
+          visibility: visible;
+        }
+      }
+    </style>
+    <!--<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script> -->
+    <script src="v6.4.3/build/ol.js"></script>
+
+    <title>OpenLayers example</title>
+    <script>
+
+        window.onload = function(){
+            //canvs = document.getElementById("map");
+            //console.log(canvs);
+            reajuste();
+            //console.log(canvs);
+        }
+
+        //window.addEventListener('resize',reajuste(canvs));
+
+        function reajuste(){
+          //let canvs = document.getElementById("c");
+          let ancho = window.innerWidth;
+          let alto = window.innerHeight;
+          let nancho;
+          let nalto;
+          let canvs = document.getElementById("map");
+          //let canvs = document.querySelector('#myCanvas');
+
+          if(ancho >= alto){
+            nalto = alto * 0.85;
+            nancho = nalto;
+            canvs.style.width = `${nancho}px`;
+            canvs.style.height = `${nancho}px`;
+
+          }else{
+            nancho = ancho * 0.85;
+            nalto = nancho;
+            canvs.style.height = `${nalto}px`;
+            canvs.style.width = `${nalto}px`;
+          }
+
+          console.log(canvs.style.height);
+        }
+
+        //window.addEventListener('resize',reajuste);
+    </script>
+  </head>
+  <body>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <div id="ups">UPS</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <script>
+        //window.addEventListener('load',reajuste);
+        reajuste();
+        window.addEventListener('resize',reajuste);
+    </script>
+<!-- - - - - - - - - - - - - Mapa Code - - - - - - - - - - - - - - - - -->
+    <script type="text/javascript">
+
+      var centerpos = [-99.12, 19.49];
+      var maxExtent = [-84.00,13.00,-117.00,33.00];
+      var newpos = ol.proj.transform(centerpos,'EPSG:4326','EPSG:900913');
+      //var googleLayer = new olgm.layer.Google();
+
+      var map = new ol.Map({
+        target: 'map',
+        //interactions: olgm.interaction.defaults(),
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+            //- - - - - - - -
+          }) 
+          /*new ol.layer.ImageLayer({
+            source: new Static({
+              //attributions: '© <a href="http://xkcd.com/license.html">xkcd</a>',
+              url: 'republicamexicana.jpg',
+              projection: projection,
+              imageExtent: extent,
+            }),
+          }) */
+
+        ],
+        //---- Esto fue añadido
+        controls: ol.control.defaults({
+          rotate: false,
+          attributionOptions: {
+            collapsible: true,
+            //rotate: false
+          }
+        }),
+        //--- Aqui acaba
+        view: new ol.View({
+          //center: ol.proj.fromLonLat([37.41, 8.82]),
+          //extent:[80.05844110726194,26.34796712822462,88.2015218371264,30.44742963310623],
+          extent: ol.proj.transformExtent(maxExtent, 'EPSG:4326', 'EPSG:900913'),
+          projection : 'EPSG:900913',
+          //center: ol.proj.fromLonLat([-99.12, 19.49]),
+          //extent:[-100, 100,-100,100],
+          center : newpos,
+          maxZoom: 8,
+          zoom: 5 
+        })
+      }); 
+
+    </script>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+ 
+  </body>
+</html>
