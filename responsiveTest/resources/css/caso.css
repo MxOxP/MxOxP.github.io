@@ -1,0 +1,85 @@
+.tamañoboton:hover{
+    background: white;
+    border-color: #DA291C;
+    color: #DA291C;
+}
+.tamañoboton{
+    width: 13em;
+    font-size: 1em;
+    background: white;
+    border-color: #5F2167;
+    color: #5F2167;
+}
+.Inicio{
+    background:  #5F2167;
+    color: white
+}
+.pBtn{
+    text-align: center;
+}
+.caso{
+    text-align: center;
+    margin-top: 2em;
+}
+.img{
+    background: url("../img/caso1.jpg") ;
+    background-position-x: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+}
+@media (max-width: 575.98px) { 
+    body {
+        font-family: RamsL;
+        font-size: 16px;
+      }
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    body {
+        font-family: RamsL;
+        font-size: 16px;
+      }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 18px;
+      }
+  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    body {
+        font-family: RamsL;
+        font-size: 20px;
+      }
+ }
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1423.98px)  { 
+    body {
+        font-family: RamsL;
+        font-size: 22px;
+      }
+ }
+ @media (min-width: 1424px) and (max-width: 1649.98px)  { 
+    body {
+        font-family: RamsL;
+        font-size: 28px;
+      }
+ }
+ @media (min-width: 1650px) and (max-width: 1744.98px)  { 
+    body {
+        font-family: RamsL;
+        font-size: 30px;
+      }
+ }
+ @media (min-width: 1745px)  { 
+    body {
+        font-family: RamsL;
+        font-size: 35px;
+      }
+ }

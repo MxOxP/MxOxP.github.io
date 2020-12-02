@@ -1,0 +1,134 @@
+@font-face{
+    font-family: Rams;
+    src: url("../tipoGrafia/Rams.otf");
+  }
+  body {
+    font-family: Rams;
+    font-size: 40px;
+  }
+header{
+    height: 2em;
+    background: #5f2167;
+    color: white;
+}
+.imagen{
+    width: 10em;
+    height: 10em;
+}
+.margenHeader{
+    padding: .4em .5em .4em .5em
+}
+.headMobil{
+    background: #5F2167;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    height: 2em;
+}
+.headWeb{
+    max-height: 2em;
+}
+.logoMobility{
+    width: 2.4em;
+}
+.logoCec{
+    width: 2.4em;
+}
+.body{
+    margin-top: .3em;
+    margin-bottom: 1.5em;
+}
+.footer{
+    background: #5F2167;
+    color: white;
+    height: 2em;
+    padding: .3em .5em .4em .5em
+}
+.btnNavegacion{
+    width: 1em;
+    height: 1em;
+}
+.footerCentro{
+    text-align: center;
+}
+.btnDraw{
+    cursor: pointer;
+    width: 1.7em;
+}
+.progressBar{
+    background-color:#DA291C;
+    border-radius: .13em;
+    height: .2em;
+    max-height: .3em;
+    width: 75%;
+    margin-bottom:1.9em;
+}
+.btnAdelante{
+    opacity: 0;
+}
+.body{
+    padding-left: .5em;
+
+}
+.simuladorImg{
+    width: 100%;
+}
+input{
+    font-size: .3em;
+    position: absolute;
+    width: 7%;
+    height: 3%;
+    left: 30%;
+    top: 24%;
+    background: transparent;
+    border: none;
+}
+@media (max-width: 575.98px) { 
+    
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+   
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+ }
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+   
+ }
+
+ @media (max-width: 575.98px) and (orientation: landscape) {
+    body{
+        font-size: 15px !important;
+    }
+    header{
+        margin-top: -1px;
+    }
+}
+
+ @media (max-width: 575.98px) {  }
+
+
+ @media (max-width: 767.98px) {  
+    body{
+        font-size: 20px;
+    }
+    header{
+        margin-top: -1px;
+    }
+ }
+ 
+ @media (max-width: 991.98px) {  }
+ 
+
+ @media (max-width: 1199.98px) {  }
+ 

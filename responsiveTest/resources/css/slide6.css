@@ -1,0 +1,13 @@
+.simulador img{
+    width: 100%;
+}
+input{
+    font-size: .3em;
+    position: absolute;
+    width: 4%;
+    height: 4%;
+    left: 47%;
+    top: 24%;
+    background: transparent;
+    border: none;
+}

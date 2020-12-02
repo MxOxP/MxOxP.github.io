@@ -1,0 +1,100 @@
+@font-face{
+    font-family: Rams;
+    src: url("../tipoGrafia/Rams.otf");
+  }
+  @font-face{
+    font-family: RamsL;
+    src: url("../tipoGrafia/RamsLigth.otf");
+  }
+body{
+    background: url("../img/SalidaSIM.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.resultados{
+    background: #5F2167;
+    color: white;
+}
+.margenCalif{
+    margin-top: 3em;
+}
+.margenRetro{
+    margin-top: 4em;
+}
+.retro{
+    border-radius: .4em;
+    border: solid .15em #43AB6C;
+    background: #ffffff;
+    padding: .7em;
+}
+.tamañoboton{
+    width: 13em;
+    font-size: 1em;
+    background: white;
+    border-color: #5F2167;
+    color: #5F2167;
+}
+.tamañoboton:hover{
+    background: white;
+    border-color: #DA291C;
+    color: #DA291C;
+}
+.divBtn{
+    margin-bottom: .5em;
+}
+@media (max-width: 575.98px) { 
+    body {
+        font-family: RamsL;
+        font-size: 16px;
+      }
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    body {
+        font-family: RamsL;
+        font-size: 16px;
+      }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 18px;
+      }
+  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    body {
+        font-family: RamsL;
+        font-size: 20px;
+      }
+ }
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1423.98px)  { 
+    body {
+        font-family: RamsL;
+        font-size: 22px;
+      }
+ }
+ @media (min-width: 1424px) and (max-width: 1649.98px)  { 
+    body {
+        font-family: RamsL;
+        font-size: 28px;
+      }
+ }
+ @media (min-width: 1650px) and (max-width: 1744.98px)  { 
+    body {
+        font-family: RamsL;
+        font-size: 30px;
+      }
+ }
+ @media (min-width: 1745px)  { 
+    body {
+        font-family: RamsL;
+        font-size: 35px;
+      }
+ }

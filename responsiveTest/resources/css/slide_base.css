@@ -1,0 +1,273 @@
+@font-face{
+    font-family: Rams;
+    src: url("../tipoGrafia/Rams.otf");
+  }
+  @font-face{
+    font-family: RamsL;
+    src: url("../tipoGrafia/RamsLigth.otf");
+  }
+header{
+    /* height: 2.8em; */
+    background: #5f2167;
+    color: white;
+}
+.margenFooter{
+    /* padding: .3em .5em .3em .5em; */
+    /* padding: .25em .5em .25em .5em; */
+    padding: .35em .6em .35em .6em;
+}
+.margenHeader{
+    padding: .57em .71em .57em .71em;
+}
+.headMobil{
+    background: #5F2167;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    height: 2.8em;
+}
+.headWeb{
+    /* max-height: 2.8em; */
+}
+.logoMobility{
+    width: 3.5em;
+}
+.logoCec{
+    width: 3.5em;
+}
+.body{
+    margin-top: .5em;
+    margin-bottom: 3.3em;
+}
+.footer{
+    background: #5F2167;
+    color: white;
+    height: 2.8em;
+}
+.btnNavegacion{
+    width: 2.14em;
+    height: 2.14em;
+}
+.footerCentro{
+    text-align: center;
+}
+.btnDraw{
+    cursor: pointer;
+    width: 2.42em;
+}
+.progressBar{
+    background-color:#DA291C;
+    border-radius: .19em;
+    height: .28em;
+    max-height: .3em;
+    width: 75%;
+    margin-bottom:2.65em;
+}
+.btnAdelante{
+    opacity: 0;
+    transition: 2s;
+}
+.quitaPadding{
+    padding: 0;
+}
+/*.body{
+    padding-left: .5em;
+}*/
+
+.textoSubtitulo{
+    color: #5F2167;
+    font-size: 1.3em;
+}
+.enfasis{
+    color: #DA291C;
+}
+.muyImportante{
+    font-size: 1.53em;
+}
+.colorMorado{
+    color: #5F2167;
+}
+.marginIOS{
+    padding: .05em .6em .05em .6em !important;
+}
+.textBorder{
+    border-bottom: .15em solid #DA291C;
+}
+.padding-Titulo{
+    padding-left: 2em;
+}
+.LabelTitulo{
+    font-size: 1.3em;
+    text-align: center;
+}
+.rowContenido{
+    margin-top: 1em;
+}
+.pCajaResaltada{
+    border-radius: 10px;
+    box-shadow: 0 0 15px #5f2167;
+    background: #ffffff;
+    padding: .7em;
+}
+.centroHorizontal{
+    text-align: center;
+}
+.contenidoSimulador{
+    text-align: center;
+    margin-top: .5em;
+}
+
+.importante{
+    font-size: 1.3em;
+}
+.content-body p{
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    background: #e2221d;
+    color: white;
+}
+.iconDrawer {
+    padding: .2em;
+    background: #5f2167;
+}
+
+.links {
+    color: #DA291C;
+}
+
+.imagenModal{
+    width: 10em;
+}
+.espacio{
+    margin-top: 1.25em !important;
+}
+.espacioPortada{
+    margin-top: 1.85em;
+}
+.body .imagenes{
+    width:2em;
+    height: 2em;
+}
+
+.btn-ado{
+    border: 2px solid #5f2167;
+    background-color: #5f2167;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 25px;
+}
+.bg-red{
+    background-color: #DA291C;
+}
+.img-adicional{
+    width: 3em;
+    height: 3em;
+}
+.icono{
+    width: 3em;
+    height: 3em;
+}
+.image-fixed{
+    position: fixed;
+    bottom: 2em;
+}
+/* col */
+@media (max-width: 575.98px) { 
+    body {
+        font-family: Rams;
+        font-size: 20px;
+      }
+ }
+/* // Small devices (landscape phones, 576px and up) */
+/* sm */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    body {
+        font-family: Rams;
+        font-size: 20px;
+      }
+      
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+/* md */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        font-family: Rams;
+        font-size: 22px;
+      }
+  }
+
+/* // Large devices (desktops, 992px and up) */
+/* lg */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    body {
+        font-family: Rams;
+        font-size: 22px;
+      }
+ }
+/* // Extra large devices (large desktops, 1200px and up) */
+/* xl */
+@media (min-width: 1200px) and (max-width: 1423.98px)  { 
+    body {
+        font-family: Rams;
+        font-size: 24px;
+      }
+ }
+ @media (min-width: 1424px) and (max-width: 1649.98px)  { 
+    body {
+        font-family: Rams;
+        font-size: 28px;
+      }
+ }
+ @media (min-width: 1650px) and (max-width: 1744.98px)  { 
+    body {
+        font-family: Rams;
+        font-size: 30px;
+      }
+ }
+ @media (min-width: 1745px)  { 
+    body {
+        font-family: Rams;
+        font-size: 35px;
+      }
+ }
+
+
+
+ 
+ @media (max-width: 575.98px) and (orientation: landscape) {
+    body{
+        font-size: 15px !important;
+    }
+    header{
+        margin-top: -1px;
+    }
+}
+
+ @media (max-width: 575.98px) {  }
+
+
+ @media (max-width: 767.98px) {  
+    body{
+        font-size: 20px;
+    }
+    header{
+        margin-top: -1px;
+    }
+ }
+ 
+ @media (max-width: 991.98px) {  }
+ 
+
+ @media (max-width: 1199.98px) {  }
+ 
+    
+ body::-webkit-scrollbar {
+    display: none;
+  }
+  
+body {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+  }

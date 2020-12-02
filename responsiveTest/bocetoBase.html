@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/master.css">
+    <script src="resources/js/jquery-3.5.1.min.js"></script>
+    <script src="resources/js/popper.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/fontawesome.js"></script>
+    <script src="resources/js/bootbox.js"></script>
+    <link rel="stylesheet" href="resources/css/modal.css">
+    <link rel="stylesheet" href="resources/css/drawer.css">
+    <title>Document</title>
+    <script>
+        var alto = $(window).height();
+        $(document).ready(function () {
+            $(".body-full").css("height", alto + "px");
+            $("body").scroll(function () {
+            });
+            $(".progressBar").css("top", alto - 45 + "px");
+
+            // var dialog = bootbox.alert({
+            //     title: "Titulo",
+            //     message: "This is the small alert!",
+            //     size: 'lg'
+            // });
+            dialog.init(function () {
+                setTimeout(function () {
+                    dialog.find(".close").css("color", "#e2221d");
+                    dialog.find(".close").css("opacity", "1");
+                    dialog.find(".close").css("pointer-events", "all");
+                }, 3000);
+            });
+        });
+        $(window).resize(function () {
+            alto = $(window).height();
+            $(".body-full").css("height", alto + "px");
+            $(".progressBar").css("top", alto - 45 + "px");
+        });
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "300px";
+            $(".backDrawer").show();
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            $(".backDrawer").hide();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="backDrawer" onclick="closeNav()">
+
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <div class="dHeader">
+            <img src="resources/img/Universidad.png" alt="">
+        </div>
+        <div class="tituloDrawer">
+            <h3>Índice</h3>
+        </div>
+        <div class="contentDrawer">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footerDrawer">
+            <button class="btn btn-link">Salida</button>
+        </div>
+    </div>
+    <div class="container-fluid d-flex flex-column  body-full">
+        <div class="row headT d-flex d-md-none justify-content-center">
+            <div class="col-2">
+                <img src="resources/img/CEC.png" class="logo" alt="CEC">
+            </div>
+            <div class="col-8"></div>
+            <div class="col-2">
+                <img src="resources/img/Mobility.png" class="logo" alt="Mobility">
+            </div>
+        </div>
+        <header class="row contentTitulo sticky-top">
+            <div class="col-12">
+                <div class="row subtitulo">
+                    <div class="col-1 btndrawer ">
+                        <h5><i class="fas fa-ellipsis-h" onclick="openNav()"></i></h5>
+                    </div>
+                    <div class="col-10 d-flex  justify-content-center titulo">
+                        <h5>Titulo</h5>
+                    </div>
+                    <div class="d-none d-md-inline col-md-1">
+                        <img src="resources/img/CEC.png" class="logo" alt="CEC">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row body">
+            <div class=" col-12 ">
+                <div style="padding: 0px 5% 0px 5%;">
+                    <div class="row instrucciones">
+                        <h5>Instrucciones</h5>
+                    </div>
+                    <div class="row content-body d-flex  justify-content-center">
+                        <p>Extra</p>
+                    </div>
+                </div>
+
+                <div class="row contenido d-flex justify-content-center ">
+                    <div class="col-12 d-flex flex-row justify-content-around">
+                        <div><img src="resources/img/flecha.png" alt="Flechas"></div>
+                        <div>
+                            <p class="offset-1"> Desplazate hacia adelante y hacia átras con estos botones</p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-row justify-content-around">
+                        <div><img src="resources/img/nota.png" alt="Flechas"></div>
+                        <div>
+                            <p class="offset-1">
+                                Este ícono indica que la infomación es muy importante, cuando lo veas toma nota
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-row justify-content-around">
+                        <div><img src="resources/img/pregunta.png" alt="Flechas"></div>
+                        <div>
+                            <p class="offset-1">
+                                Obten información adicional o datos importantes con este botón
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-row justify-content-around">
+                        <div><img src="resources/img/home.png" alt="Flechas"></div>
+                        <div>
+                            <p class="offset-1">Regresa al inicio del material con este botón</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer  d-flex  justify-content-md-around mt-auto ">
+            <div class="  col-2  col-lg-1">
+                <div class="">
+                    <img src="resources/img/Atras.png" alt="Flechas">
+                </div>
+            </div>
+            <div class="col-8 col-lg-9 contLogo">
+                <div class="d-none d-md-inline ">
+                    <img src="resources/img/Mobility.png" class="MobLogoFoot" alt="Mobility">
+                </div>
+            </div>
+            <div class="d-flex justify-content-end  col-2 col-lg-1">
+                <img src="resources/img/Adelante.png" alt="Adelante">
+            </div>
+        </div>
+        <section class="progressBar">
+
+        </section>
+
+    </div>
+</body>
+
+</html>

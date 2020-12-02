@@ -1,0 +1,43 @@
+
+.modal-content{
+    font-size: 20px;
+    border-radius: .75em;
+}
+.modal-header{
+    border-bottom: solid #e2221d .1em;
+    color: #5F2167;
+}
+.modal-header h5{
+    font-weight: bolder;
+}
+.modal-header button{
+    font-size: 2em;
+    opacity: .2;
+    pointer-events: none;
+}  
+.modal-content{
+    border: none;
+    font-size:1.5em;
+    font-family: Rams;
+    text-align: center;
+}
+.modal-footer{
+    display: none;
+}
+.correcto{
+    background: #43AB6C !important;
+}
+.incorrecto{
+    background:  #E01E32 !important;
+}
+.correctoL{
+    color: #43AB6C !important;
+}
+.incorrectoL{
+    color:  #E01E32 !important;
+}
+@media (max-width: 575.98px) { 
+    /* .modal-content{
+         margin-top: 100px;
+    } */
+ }

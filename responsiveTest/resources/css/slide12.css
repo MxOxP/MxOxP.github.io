@@ -1,0 +1,53 @@
+body{
+    font-size: 35px;
+}
+.separador{
+    margin-left: -.3em;
+    height: .1em;
+    background-color: #DA291C;
+}
+.Instrucciones span{
+    color: #DA291C;
+}
+.contenidoEjercicio{
+    margin-top: 1.3em;
+} 
+.contenidoEjercicio select, .contenidoEjercicio input{
+    width: 7.5em !important;
+    border: 2px solid #5F2167;
+    color: #5F2167;
+}
+.mobilMargenEj .row{
+    margin-top: 1.3em;
+}
+.input-group, .form-control{
+    display: inline;
+    width: 9.5em;
+}
+.borrar{
+    cursor: pointer;
+    display: none;
+}
+.btn-success{
+    color: #fff;
+    background-color: #43ab6c;
+    border-color:#43ab6c;
+}
+.validar, #btnReiniciar{
+    font-size: 1em;
+    display: none;
+}
+.fa-check{
+    color:  #43ab6c;
+}
+.fa-close{
+    color:  #DA291C;
+}
+@media (max-width: 767.98px) {  
+    body{
+        font-size: 20px;
+    }
+    .mobilMargenEj{
+        margin-top: 1.3em;
+    }
+}

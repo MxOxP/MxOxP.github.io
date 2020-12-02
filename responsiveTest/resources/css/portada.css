@@ -1,0 +1,153 @@
+@font-face{
+    font-family: Rams;
+    src: url("../tipoGrafia/Rams.otf");
+  }
+  @font-face{
+    font-family: RamsL;
+    src: url("../tipoGrafia/RamsLigth.otf");
+  }
+body{
+    color: white;
+}
+.triangulo-equilatero-top-right{
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-right: 50vw solid #5f2167;
+	border-top: 50vh solid #5f2167;
+	border-left: 50vw solid transparent;
+	border-bottom: 50vh solid transparent;
+	z-index: -1;
+}
+#imgFondo{
+	/*position: absolute;*/
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: -2;
+}
+.pantalla{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -2
+}
+.titulo{
+    font-size: 2em;
+}
+.titulo span{
+    font-size: 2.3em;
+}
+.titulo label{
+    font-size: .87em;
+}
+.Abajo{
+    margin: 0em 0em 6em .3em
+}
+.Arriba{
+    color: #EEEE !important;
+    z-index: 3000;
+    margin-top: 3em;
+}
+.sub{
+    margin-top: -.5em;
+}
+.logos label{
+    font-size: 1.5em;
+}
+#mobility{
+    width: 7.5em;
+}
+.bab{
+    margin-top: .3em;
+}
+#play{
+    z-index: 1032;
+    width: 4em !important;
+    cursor: pointer;
+}
+.margenPequeño{
+    padding-right: 4em;
+}
+.margenPequeñoIconMob{
+    padding-right: 6.5em;
+}
+.margenPequeñoIcon{
+    padding-right: 8em;
+}
+@media (max-width: 575.98px) { 
+    body {
+        font-family: Rams;
+        font-size: 16px;
+      }
+    .Abajo{
+        margin: 0em 0em 3em .3em
+    }
+    .margenPequeño{
+        padding-right: 1.5em;
+    }
+    .margenPequeñoIconMob{
+        padding-right: 4em;
+    }
+    .margenPequeñoIcon{
+        padding-right: 5.5em;
+    }
+    .Arriba {
+        margin-top: 2em;
+    }
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    body {
+        font-family: Rams;
+        font-size: 18px;
+      }
+      .Abajo{
+        margin: 0em 0em 3em .3em
+    }
+    .margenPequeño{
+        padding-right: 1.5em;
+    }
+    .margenPequeñoIconMob{
+        padding-right: 4em;
+    }
+    .margenPequeñoIcon{
+        padding-right: 6em;
+    }
+    .Arriba {
+        margin-top: 2em;
+    }
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        font-family: Rams;
+        font-size: 20px;
+      }
+  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    body {
+        font-family: Rams;
+        font-size: 25px;
+      }
+ }
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1423.98px)  { 
+    body {
+        font-family: Rams;
+        font-size: 27px;
+      }
+ }
+
+
+
+ /* // Medium devices (tablets, 768px and up) */

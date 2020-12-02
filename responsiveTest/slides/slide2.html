@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1,shrink-to-fit=no,minimal-ui" />
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/slide_base.css">
+    <link rel="stylesheet" href="../resources/css/modal.css">
+    <link rel="stylesheet" href="../resources/css/drawer.css">
+    <link rel="stylesheet" href="../resources/css/proposito.css">  
+    <script src="../resources/js/jquery-3.5.1.min.js"></script>
+    <script src="../resources/js/popper.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/fontawesome.js"></script>
+    <script src="../resources/js/bootbox.js"></script>
+    <script src="../resources/js/modalRotacion.js"></script>
+    <script src="../resources/js/getSVG.js"></script>
+    <script src="../resources/js/drawerFunction.js"></script>
+    <title>Slide</title>
+    <script>
+        var alto = $(window).height();
+        var ancho = $(window).width();
+        var secuencia_modales = [false, false, false, false, false];
+        function verificaActivos(indice) {
+            contador[indice] = true;
+            var items = 0;
+            $.each(secuencia_modales, function (i, e) {
+                if (e) {
+                    items++;
+                }
+            });
+            var x = (items === secuencia_modales.length);
+            return x;
+        }
+        // Metodo para mostrar modales (Titulo del header,contenido del mensaje,tamaño del dialogo sm,md,lg,xl,Boleano para activar el evento de el cerrado del dialogo)
+        function createDialog(titulo, msg, tamano, activacion) {
+            var dialog = bootbox.dialog({
+                title: titulo,
+                message: msg,
+                size: tamano
+            });
+            dialog.init(function () {
+                // No mover el metodo de abajo ya que es el que marca la X de rojo despues de 3.5s
+                setTimeout(function () {
+                    dialog.find(".close").css("color", "#e2221d");
+                    dialog.find(".close").css("opacity", "1");
+                    dialog.find(".close").css("pointer-events", "all");
+                }, 3000);
+
+                if (activacion) {
+                    $(".bootbox-close-button").click(function () {
+                        //Aqui poner la funcion que se quiera realizar cuando se cierre el modal
+                        setTimeout(function () {
+                            $(".btnAdelante").css("opacity", "1");
+                        }, 5000);
+                        window.parent.setEstatusSlide(2, 3);
+                        $(".btnAdelante").click(function () {
+                            window.parent.changePage(2, 3, "");
+                        });
+
+                    });
+                }
+            });
+        }
+        ///*********SetTime para que aparezca el boton de adelante
+        setTimeout(function () {
+            $(".btnAdelante").css("opacity", "1");
+        }, 5000);
+
+        //*********Metodo para abrir drawer
+        function openNav() {
+            $("#mySidenav").css("width", "300px");
+            $(".footerDrawer").show("swing");
+            $(".backDrawer").fadeIn();
+            $(".headMobil").css("display", "none !important");
+        }
+        //*********Metodo para cerrar drawer
+        function closeNav() {
+            $("#mySidenav").css("width", "0px");
+            $(".backDrawer").hide();
+            $(".footerDrawer").hide();
+            $(".headMobil").show();
+        }
+        $(document).ready(function () {
+            //Metodo para marcar posicion tema drawer
+            window.parent.setEstatusSlide(2, 3);
+            setDrawerFunction(2);
+            //Metodo de la master para cambiar estatus de slide
+            // window.parent.setEstatusSlide(2, 3);
+
+            $("#btnSig").click(function () {
+                window.parent.setEstatusSlide(2, 3);
+                window.parent.changePage(2, 3, "");
+            });
+
+            $(".btn-link").click(function(){
+                window.parent.salir();
+            });
+        });
+        //Colocar esta linea en los slide que se requiera tener una posicion horizontal
+        //window.onorientationchange = readDeviceOrientation;
+
+        //Metodo para cuando cambie la resolucion y saber si mostrar el titulo completo o no
+        $(window).resize(function () {
+            alto = $(window).height();
+            ancho = $(window).width();
+            if (ancho > 768) {
+                $(".margenHeader label").html("Evaluación: ¿Cómo vender un viaje redondo con fecha y hora?");
+            }
+        });
+        //***********Este metodo va a funcionar practicamente solo para dispositivos moviles para posicionar
+        // los iconos del header al hacer scroll
+        $(window).scroll(function () {
+            var desplazamientoActual = $(document).scrollTop();
+            if (desplazamientoActual > 60) {
+                $(".headWebR .logoCec").removeClass("d-none");
+                $(".footerCentro div").removeClass("d-none");
+                if (ancho < 768) {
+                    // Editar nombre abreviado
+                    $(".margenHeader label").html("ISRyM");
+                }
+            } else {
+                $(".headWebR .logoCec").addClass("d-none");
+                $(".footerCentro div").addClass("d-none");
+                if (ancho < 768) {
+                    // Editar nombre completo
+                    $(".margenHeader label").html("Evaluación: ¿Cómo vender un viaje redondo con fecha y hora?");
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid all">
+        <section class="row headMobil d-flex d-md-none justify-content-center">
+            <div class="col-3">
+                <img src="../resources/img/CEC.svg" class="logoCec" alt="CEC">
+            </div>
+            <div class="col-6"></div>
+            <div class="col-3">
+                <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+            </div>
+        </section>
+        <!-- ********SECCION PARA HEADER -->
+        <header class="row header sticky-top">
+            <div class="col-12 headWeb d-flex flex-row flex-nowrap justify-content-between quitaPadding">
+                <div class="d-flex flex-column justify-content-center margenHeader">
+                    <!-- <i class="fas fa-ellipsis-h btnDraw" ></i> -->
+                    <img src="../resources/img/drawer.svg" class="btnDraw" onclick="openNav()" alt="">
+                </div>
+                <div class="d-flex justify-content-center margenHeader LabelTitulo">
+                    <label>Evaluación: ¿Cómo ingresar al sistema de venta?</label>
+                </div>
+                <div class="headWebR margenHeader d-flex flex-column justify-content-center">
+                    <img src="../resources/img/CEC.svg" class="logoCec d-none d-md-inline" alt="CEC">
+                </div>
+            </div>
+        </header>
+
+        <!-- *******SECCION BODY -->
+        <section class="row body">
+            <!-- Este div parrafo se creo para ejemplo explicado a mau -->
+            <div class="col-12">
+                <div class="row h-25 img">
+
+                </div>
+                <div class="row proposito rowContenido">
+                    <div class="col-12 centroHorizontal">
+                        <label for="" class="enfasis">Propósito</label>
+                    </div>
+                    <div class="col-10 offset-1 paddingB">
+                        <!-- El primer parrafo es el unico q tienen que cambiar -->
+                        <p>En esta actividad, pondrás en práctica lo aprendido en el vídeo tutorial, a fin de que
+                            desarrolles las competencias necesarias para gestionar las ventas adecuadamente en el
+                            sistema.</p>
+                        <p>
+                            Antes de iniciar, recuerda:
+                        <ul>
+                            <li>Tendrás 3 intentos para realizar la actividad y la calificación final será la más alta
+                                que obtengas.</li>
+                            <li>No está permitido el uso de funciones del teclado.</li>
+                        </ul>
+                        </p>
+                        <p>
+                            Te recomendamos leer detenidamente y apuntar los datos del caso a resolver que aparecerán en
+                            la siguiente
+                            pantalla (porque NO volverán a aparecer).
+                        </p>
+                        <p>Esta es una evaluación con un simulador, el número de clics es importante para obtener la
+                            respuesta correcta.
+                            Si estás listo, haz clic en el botón.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ***SECCION PARA footer -->
+        <section class="footer fixed-bottom">
+            <div class="col-12 quitaPadding d-flex flex-row flex-nowrap
+          justify-content-between align-items-center">
+                <div class="margenFooter">
+                    <img src="../resources/img/Atras.svg" class="btnNavegacion btnAtras" alt="Atras">
+                </div>
+                <div class="footerCentro">
+                    <div class="d-none d-md-inline margenFooter">
+                        <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+                    </div>
+                </div>
+                <div class="margenFooter">
+                    <img src="../resources/img/Adelante.svg" class="btnNavegacion
+              btnAdelante" id="btnSig" alt="Adelante">
+                </div>
+            </div>
+        </section>
+        <!-- ****SECCION BARRA DE PROGRESO -->
+        <section class="progressBar fixed-bottom"></section>
+
+
+    </div>
+    <!-- seccion para el drawer -->
+    <div class="backDrawer bootbox modal fade bootbox-alert show" onclick="closeNav()">
+
+    </div>
+
+    <section id="mySidenav" class="sidenav">
+        <div class="dHeader">
+            <img src="../resources/img/Universidad.svg" alt="">
+        </div>
+        <div class="tituloDrawer">
+            <h3>Índice</h3>
+        </div>
+        <!-- Aqui cambiar por el contenido suyo de ustedes -->
+        <div class="contentDrawer">
+            <ul>
+                <li class="visto">
+                    Inicio
+                </li>
+                <li class="visto">
+                    Propósito
+                </li>
+                <li>
+                    Caso
+                </li>
+                <li>
+                    Simulador
+                </li>
+                <li>
+                    Resultados
+                </li>
+                <li>
+                    Despedida
+                </li>
+            </ul>
+        </div>
+        <div class="footerDrawer fixed-bottom">
+            <button class="btn btn-link">Salida</button>
+        </div>
+    </section>
+</body>
+
+</html>
