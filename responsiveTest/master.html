@@ -175,7 +175,7 @@
           if( /Mobile|iPod/.test(ua)){
             return "iPod";
           }
-          if( /tablet|iPad/.test(ua)){
+          if( /(Mobile|tablet)|(iPad|ipad)/.test(ua)){
             return "iPad";
           }
           return "desktop";
