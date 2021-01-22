@@ -69,7 +69,7 @@
 			//Codigo para habilitar seleccion de elemento
 			let btn2 = document.getElementById("btn2");
 			btn2.addEventListener("click",function(){
-				document.getElementById("textEditor").style.display = "block";
+				//document.getElementById("textEditor").style.display = "block";
 				setTimeout(function(){ 
 					selectON = true;
 				}, 100);
@@ -85,6 +85,7 @@
 			  document.getElementById("Frame_slide").contentWindow.document.addEventListener('click', function(e) {
 			  	//document.addEventListener('click', function(e) {
 			  		if(selectON){
+			  			document.getElementById("textEditor").style.display = "block";
 			  			document.getElementById("textZone").innerHTML = "";
 			  			selectON = false;
 					    e = e || window.event;
