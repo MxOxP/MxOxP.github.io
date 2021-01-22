@@ -68,6 +68,7 @@
 			//Codigo para habilitar seleccion de elemento
 			let btn2 = document.getElementById("btn2");
 			btn2.addEventListener("click",function(){
+				document.getElementById("textEditor").style.display = "block";
 				setTimeout(function(){ 
 					selectON = true;
 				}, 100);
@@ -146,6 +147,7 @@
 				width: 420px;
 				height: 250px;
 				background: white;
+				display: none;
 
 				/*overflow: scroll;*/
 			}
