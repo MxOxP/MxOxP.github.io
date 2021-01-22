@@ -1,0 +1,39 @@
+body{
+    background: url("../img/SalidaERP.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+}
+.texto{
+    margin-bottom: .5em;
+    font-size: .8em ;
+}
+.pCajaResaltada{
+    text-align: center;
+}
+.logos{
+    width: 4.5em;
+}
+.mLogos{
+    margin-top: .8em;
+}
+#botonsalir:hover{
+    cursor: pointer;
+}
+.tamañoboton{
+    width: 8em;
+    font-size: .8em;
+    background: white;
+    border-color: #5F2167;
+    color: #5F2167;
+}
+.tamañoboton:hover{
+    background: white;
+    border-color: #DA291C;
+    color: #DA291C;
+} 
+.img{
+    width: 65%;
+    margin-left: 32%;
+} 

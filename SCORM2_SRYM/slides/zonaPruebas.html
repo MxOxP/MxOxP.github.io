@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<script src="FileSaver.js"></script>
+	</head>
+	<body>
+		<style>
+			.btn{
+				background-color: #9977cc;
+				font-size: 24px;
+				padding: 15px;
+				border-radius: 15px;
+				width: 200px;
+				text-align: center;
+				color: white;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			.btn:hover{
+				background-color: green;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+			  let btn = document.getElementById("btn");
+			  //console.log(btn);
+			  //var blob = new Blob(["This is my first text."], {type: "text/plain;charset=utf-8"});
+			  btn.addEventListener("click",function(){
+			  	let frame = document.getElementById("Frame_slide");
+			  	console.log(frame);
+			  	console.log(frame.contentWindow.document)
+			  	//var blob = new Blob(["This is my first text."], {type: "text/plain;charset=utf-8"});
+			  	//saveAs(blob, "testfile1.txt");
+			  });
+			  //saveAs(blob, "testfile1.txt");
+			};
+		</script>
+		<iframe id="Frame_slide" title="uno" width="100%" height="500" src="slide9.html"></iframe>
+		<div class="btn" id="btn">
+			Prueba
+		</div>
+		
+	</body>
+</html>

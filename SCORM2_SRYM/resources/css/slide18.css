@@ -1,0 +1,155 @@
+.alinea-vertical{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.img-col{
+  width: 40vw;
+}
+
+.icon-col{
+  font-size: 25vw;
+}
+
+.iconStyle{
+  color: #5f2167;
+}
+
+.img-inside{
+  width: 17.5vw;
+  height: 17.5vw;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.containerMorado{
+  width: 22vw;
+  height: 22vw;
+  background-color: #5F2167;
+  border-radius: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.media{
+  width: 100%;
+}
+
+.media img{
+  width: 25%;
+  margin: auto;
+}
+.media p{
+  display: inline-block;
+  width: 75%;
+}
+.media div{
+  display: flex;
+  justify-content: space-around;
+}
+
+.btnBordeMorado{
+  border: #5f2167 solid 4px;  /* #ca2837 */ /* #5f2167 */
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.enfasis2{
+  font-weight: bold;
+  color: #5F2167;
+}
+
+.brain{
+  width: 71vw;
+}
+
+
+
+@media(max-width: 767.98px){
+  /*.img-col{
+    width: 80vw;
+  }
+  .icon-col{
+    font-size: 70vw;
+  }
+  .alinea-vertical{
+    margin-top: 35px;
+  }
+
+  .img-inside{
+    width: 56vw;
+    height: 56vw;
+  }
+
+  .containerMorado{
+    width: 70vw;
+    height: 70vw;
+  }
+  .brain{
+    width: 88vw;
+  }*/
+}
+@media(max-width: 991.98px){
+  .img-col{
+    width: 80vw;
+  }
+  .icon-col{
+    font-size: 70vw;
+  }
+  .alinea-vertical{
+    margin-top: 35px;
+  }
+
+  .img-inside{
+    width: 56vw;
+    height: 56vw;
+  }
+
+  .containerMorado{
+    width: 70vw;
+    height: 70vw;
+  }
+  .brain{
+    width: 88vw;
+  }
+}
+
+
+@media (max-width: 575.98px) { 
+
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .icon-col{
+      font-size: 30vw;
+    }
+  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+ }
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1423.98px)  { 
+  .body{
+    font-size: 18px;
+  }
+ }
+ @media (min-width: 1424px) and (max-width: 1649.98px)  { 
+
+ }
+ @media (min-width: 1650px) and (max-width: 1744.98px)  { 
+
+ }
+ @media (min-width: 1745px)  { 
+
+ }

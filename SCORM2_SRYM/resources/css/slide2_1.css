@@ -1,0 +1,293 @@
+/*!
+ * Slides css generales 
+ */
+ @font-face{
+    font-family: Rams;
+    src: url("../tipoGrafia/Rams.otf");
+  }
+  @font-face{
+    font-family: RamsL;
+    src: url("../tipoGrafia/RamsLigth.otf");
+  }
+ #contentSlide {
+    font-family: RamsL !important;
+  }
+@media (max-width: 767.98px) {
+  .margenMobil {
+    margin-top: 1em;
+  }
+}
+fieldset {
+    border: 1px groove #5f2167 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #5f2167;
+            box-shadow:  0px 0px 0px 0px #5f2167;
+            border-radius: 10px;
+            padding: 0.2em 0.2em 0.2em 0.2em !important;
+  }
+  
+  .fieldsetMargen{
+     margin-top: 5px;
+  }
+  legend {
+    color: black;
+    padding: 0px 10px;
+    font-size: 0.5em;
+    border-bottom:none;
+    width: auto;
+    text-align: left !important;
+    margin-bottom: -1px;
+  }
+  .input-group-text {
+    background-color:transparent !important;
+  }
+  .enfasisMd{
+    color: #DA291C;
+    font-size: 1.3em;
+  }
+  .enfasisXSM{
+    color: #7D4B84;
+    font-size: 0.7em;
+  }
+  .enfasisSM{
+    color: #7D4B84;
+    font-size: 1em;
+  }
+  .enfasisMdM{
+    color: #7D4B84;
+    font-size: 1.3em;
+  }
+  .enfasisMdCorrecto{
+    color: rgb(4, 204, 104);
+    font-size: 1.3em;
+  }
+  .enfasisMdIncorrecto{
+    color: red;
+    font-size: 1.3em;
+  }
+  .containerCHK {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    /*font-size: 22px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .remarcaCorrecta{
+    border: 2px solid green;
+    border-radius: 10px;
+  }
+  /* Hide the browser's default radio button */
+  .containerCHK input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    margin-left: 4px;
+    border: 2px solid #7D4B84;
+    border-radius: 50%;
+  }
+  .evaluado .containerCHK{
+    cursor:auto;
+  }
+  .evaluado .containerCHK input{
+    cursor: auto;
+  }
+  .evaluado .containerCHK:hover input ~ .checkmark{
+    background: transparent;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .containerCHK:hover input ~ .checkmark {
+    background-color: #7d4b8456;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .containerCHK input:checked ~ .checkmark {
+    background-color: #5F2167 !important;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .containerCHK input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .containerCHK .checkmark:after {
+    top: 5.5px;
+    left: 5.5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+  }
+  hr {
+    height: 1px;
+  background-color: #DA291C;
+    }
+    .iconsCodigo{
+      width: 80%;
+    }
+ /*!
+ * Slides2
+ */
+ .imgGif2 {
+    width: 100%;
+}
+/*!
+ * Slides3
+ */
+ .imgGif3 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  /*!
+ * Slides4
+ */
+ .imgGif4 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .imgValores4 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  /*!
+ * Slides5
+ */
+ .imgGif5 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.imgValores5 {
+    width: 100%;
+    margin: 0 auto;
+}
+.borrador{
+    color: #5F2167;
+    font-size: 1.25em;
+}
+.opciones{
+    background-color: #5F2167;
+    padding: 0.5px !important;
+    display: block;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.opciones-margin{
+    margin-bottom: 1.5em;
+}
+.opciones_select{
+    background-color:#7D4B84;
+}
+.opciones_relacionada{
+    background-color:#A8A8C1;
+}
+.respuesta{
+    cursor: pointer;
+}
+ /*!
+ * Slides7
+ */
+ .imgGif5 {
+  width: 80%;
+  margin: 0 auto;
+}
+/*!
+ * Slides16
+ */
+ .img16-1{
+  width: 50%;
+ margin: 0 auto;
+}
+/*!
+ * Slides17
+ */
+ .img17-1{
+  width: 50%;
+ margin: 0 auto;
+}
+/*!
+ * Slides18
+ */
+.imgGif18{
+  width: 80%;
+}
+/*!
+ * Slides19
+ */
+ .imgGif19{
+  width: 100%;
+  height: 50vh;
+}
+/*!
+ * Slides22
+ */
+.cuadro1{
+cursor: pointer;
+}
+.cuadro2{
+  cursor: pointer;
+}
+.cuadro3{
+  cursor: pointer;
+}
+.cuadro4{
+  cursor: pointer;
+}
+.cuadro5{
+  cursor: pointer;
+}
+.cuadro6{
+  cursor: pointer;
+}
+.cuadro7{
+  cursor: pointer;
+}
+.cuadro8{
+  cursor: pointer;
+}
+.cuadro9{
+  cursor: pointer;
+}
+.cuadro10{
+  cursor: pointer;
+}
+/*!
+ * Slides19
+ */
+ path.st283.section1{
+   fill:rgba(97, 33, 102, 0.8);
+ }
+ path.st283.section2{
+  fill:rgba(97, 33, 102, 0.8);
+}
+path.st283.section3{
+  fill:rgba(97, 33, 102, 0.8);
+}
+path.st283.section4{
+  fill:rgba(97, 33, 102, 0.8);
+}
+path.st283.section5{
+  fill:rgba(97, 33, 102, 0.8);
+}

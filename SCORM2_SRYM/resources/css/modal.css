@@ -1,0 +1,91 @@
+@font-face{
+    font-family: Rams;
+    src: url("../tipoGrafia/Rams.otf");
+  }
+.modal-content{
+    border-radius: .75em;
+    margin-top: 2.5em;
+}
+.modal-header{
+    border-bottom: solid #e2221d .1em;
+    color: #5F2167;
+    font-family: Rams;
+    font-size: 1.15em !important;
+}
+.modal-header h5{
+    font-weight: bolder;
+    font-family: Rams;
+    font-size: 1em !important;
+}
+.modal-header button{
+    font-size: 1.15em;
+    opacity: .2;
+    outline: none;
+}  
+.modal-header button:hover{
+    color: #e2221d;
+} 
+.modal-content{
+    border: none;
+    font-size:1em;
+    font-family: Rams;
+}
+.modal-footer{
+    display: none;
+}
+/*.modal-backdrop {
+    background: url("fondo_dialog.png") no-repeat center center fixed !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    -webkit-filter: blur(5px);
+    background-color: rgb(31 30 30 / 78%) !important;
+    backdrop-filter: blur(40px) !important;
+    
+}*/
+/*.modal-backdrop{
+    width: 100vw !important;
+    height: 100vh !important;
+    background: inherit !important;
+    overflow: hidden !important;
+}
+.modal-backdrop:after{
+    width: 100vw !important;
+    height: 100vh !important;
+    content: ' ';
+ background: inherit; 
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 0; 
+ bottom: 0;
+ box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3);
+ filter: blur(10px);
+ transform: scale(0.95);
+ backdrop-filter: blur(3px);
+}*/
+.modal-backdrop{
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    opacity: 1 !important;
+}
+.modal-backdrop.show {
+    opacity: 1 !important;
+}
+/*@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .modal-backdrop {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      -moz-filter: blur(10px);
+      -o-filter: blur(10px);
+      -ms-filter: blur(10px);
+      filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.788);  
+    }
+  }*/
+
+@media (max-width: 575.98px) { 
+    /* .modal-content{
+         margin-top: 100px;
+    } */
+ }

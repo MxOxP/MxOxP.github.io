@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/slide_base.css">
+    <link rel="stylesheet" href="../resources/css/modal.css">
+    <link rel="stylesheet" href="../resources/css/drawer.css">
+    <link rel="stylesheet" href="../resources/css/despedida.css">
+    <script src="../resources/js/jquery-3.5.1.min.js"></script>
+    <script src="../resources/js/popper.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/fontawesome.js"></script>
+    <script src="../resources/js/bootbox.js"></script>
+    <!--<script src="../resources/js/modalRotacion1.js"></script>-->
+    <script src="../resources/js/drawerFunction.js"></script>
+    <script src="../resources/js/getSVG.js"></script>
+    <script src="../resources/js/tituloJS.js"></script>
+    <title>Inducción Supervisor de Ruta y Mercado</title>
+    <script>
+        //var RotationEnabled = false;
+        var slide_origen = 13;
+        var slide_destino = 13;
+        var slide_anterior = 12;
+        //var progreso = 100;
+        //*********Metodo para abrir drawer
+        function openNav() {
+            $("#mySidenav").css("width", "300px");
+            $(".footerDrawer").show("swing");
+            $(".backDrawer").fadeIn();
+            $(".headMobil").css("display", "none !important");
+        }
+        //*********Metodo para cerrar drawer
+        function closeNav() {
+            $("#mySidenav").css("width", "0px");
+            $(".backDrawer").hide();
+            $(".footerDrawer").hide();
+            $(".headMobil").show();
+        }
+        function salidaDrawer() {
+            var prom = window.parent.promediarSlides();
+            if (prom >= 80) {
+                window.parent.cerrarVentana(prom, 0);
+            }
+            else {
+                window.parent.cerrarVentana(prom, 2);
+            }
+        }
+        $(document).ready(function () {
+            var total = (100/13)*13;
+            $(".progressBar").css("width",total+"%");
+            //$(".progressBar").css("width", progreso + "%");
+            //Metodo de la master para cambiar estatus de slide
+            window.parent.setEstatusSlide(13, 3);
+            setDrawerFunction(4);
+            let puntaje = window.parent.promediarSlides();
+            $("#puntaje").html(puntaje+"%" + ` (${puntaje} puntos)`);
+            if(puntaje >= 80){
+                $("#noAprobado").hide();
+            }else{
+                $("#aprobado").hide();
+            }
+
+            $(".btnAdelante").css("opacity","0");
+
+            $(".btnSalir").click(function(){
+                window.parent.cerrarVentana(puntaje,1);
+            });
+            $(".btn-link").click(function(){
+                window.parent.cerrarVentana(puntaje,1);
+              });
+            $(".btnAtras").click(function () {
+                window.parent.backPage(slide_anterior);
+            });
+            //readDeviceOrientation();
+        });
+    </script>
+    <style>
+        .fixed-bottom-despedida {
+            /*    position: fixed; Posiblemente sea el motivo por el cual no hace scroll */
+            right: 0;
+            bottom: 3em;
+            left: 0;
+            margin-top: 4em;
+            /*  Se cambio por el fixed */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <section class="row headMobil d-flex d-md-none justify-content-center">
+            <div class="col-3">
+                <img src="../resources/img/CEC.svg" class="logoCec" alt="CEC">
+            </div>
+            <div class="col-6"></div>
+            <div class="col-3">
+                <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+            </div>
+        </section>
+        <!-- ********SECCION PARA HEADER -->
+        <header class="row header sticky-top">
+            <div class="col-12 headWeb d-flex flex-row flex-nowrap
+          justify-content-between quitaPadding">
+                <div class="d-flex flex-column justify-content-center margenHeader">
+                    <!-- <i class="fas fa-ellipsis-h btnDraw" ></i> -->
+                    <img src="../resources/img/drawer.svg" class="btnDraw" onclick="openNav()" alt="">
+                </div>
+                <div class="d-flex justify-content-center margenHeader LabelTitulo">
+                    <label class="text-center">Evaluación: Procesos administrativos de SRyM</label>
+                </div>
+                <div class="headWebR margenHeader d-flex flex-column
+            justify-content-center">
+                    <img src="../resources/img/CEC.svg" class="logoCec d-none d-md-inline" alt="CEC">
+                </div>
+            </div>
+        </header>
+        <!-- *******SECCION BODY -->
+        <section class="row body">
+            <div class=" col-12 ">
+                <div class="row fixed-bottom-despedida texto">
+                    <div class="col-10 offset-1">
+                        <p class="pCajaResaltada">
+                            <strong>¡Gracias por tu participación!</strong> <br />
+                            Presiona para salir de la tarea.<br />
+                            <button class="tamañoboton btn btnSig btnSalir">Salir</button>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ***SECCION PARA footer -->
+        <section class="footer fixed-bottom">
+            <div class="col-12 quitaPadding d-flex flex-row flex-nowrap
+          justify-content-between align-items-center">
+                <div class="margenFooter">
+                    <img src="../resources/img/Atras.svg" class="btnNavegacion btnAtras" alt="Atras">
+                </div>
+                <div class="footerCentro">
+                    <div class="d-none d-md-inline margenFooter">
+                        <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+                    </div>
+                </div>
+                <div class="margenFooter">
+                    <img src="../resources/img/Adelante.svg" class="btnNavegacion
+              btnAdelante" alt="Adelante">
+                </div>
+            </div>
+        </section>
+        <!-- ****SECCION BARRA DE PROGRESO -->
+        <section class="progressBar fixed-bottom"></section>
+
+
+    </div>
+    <!-- seccion para el drawer -->
+    <div class="backDrawer bootbox modal fade bootbox-alert show" onclick="closeNav()">
+
+    </div>
+
+    <section id="mySidenav" class="sidenav">
+        <div class="dHeader">
+            <img src="../resources/img/Universidad.svg" alt="">
+        </div>
+        <div class="tituloDrawer">
+            <h3>Índice</h3>
+        </div>
+        <!-- Aqui cambiar por el contenido suyo de ustedes -->
+        <div class="contentDrawer">
+            <ul>
+                <li id="indice1">
+                    Instrucciones de navegación
+                </li>
+                <li id="indice2">
+                    Ejercicio
+                </li>
+                <li id="indice3">
+                    Resultados
+                </li>
+                <li id="indice4">
+                    Despedida
+                </li>
+            </ul>
+        </div>
+        <div class="footerDrawer fixed-bottom">
+            <button class="btn btn-link" onclick="">Salida</button>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Last-Modified" content="0">
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../resources/css/slide_base.css">
+  <link rel="stylesheet" href="../resources/css/instrucciones_evaluacion.css">
+  <link rel="stylesheet" href="../resources/css/modal.css">
+  <link rel="stylesheet" href="../resources/css/drawer.css">
+  <script src="../resources/js/jquery-3.5.1.min.js"></script>
+  <script src="../resources/js/popper.min.js"></script>
+  <script src="../resources/js/bootstrap.min.js"></script>
+  <script src="../resources/js/fontawesome.js"></script>
+  <script src="../resources/js/bootbox.js"></script>
+  <script src="../resources/js/drawerFunction.js"></script>
+  <script src="../resources/js/modalRotacion1.js"></script>
+  <script src="../resources/js/getSVG.js"></script>
+  <script src="../resources/js/tituloJS.js"></script>
+  <title>Inducción Supervisor de Ruta y Mercado</title>
+  <script>
+    var RotationEnabled = false;
+    var alto = $(window).height();
+    var ancho = $(window).width();
+    var progreso = 14.2;
+    var secuencia_modales = [false, false, false, false, false];
+    function verificaActivos(indice) {
+      contador[indice] = true;
+      var items = 0;
+      $.each(secuencia_modales, function (i, e) {
+        if (e) {
+          items++;
+        }
+      });
+      var x = (items === secuencia_modales.length);
+      return x;
+    }
+    // Metodo para mostrar modales (Titulo del header,contenido del mensaje,tamaño del dialogo sm,md,lg,xl,Boleano para activar el evento de el cerrado del dialogo)
+    function createDialog(titulo, msg, tamano, activacion) {
+      var dialog = bootbox.dialog({
+        title: titulo,
+        message: msg,
+        size: tamano
+      });
+      dialog.init(function () {
+        // No mover el metodo de abajo ya que es el que marca la X de rojo despues de 3.5s
+        setTimeout(function () {
+          dialog.find(".close").css("color", "#e2221d");
+          dialog.find(".close").css("opacity", "1");
+          dialog.find(".close").css("pointer-events", "all");
+        }, 3000);
+
+        if (activacion) {
+          $(".bootbox-close-button").click(function () {
+            //Aqui poner la funcion que se quiera realizar cuando se cierre el modal
+            setTimeout(function () {
+              $(".btnAdelante").css("opacity", "1");
+            }, 5000);
+            window.parent.setEstatusSlide(10, 3);
+            $(".btnAdelante").click(function () {
+              window.parent.changePage(10, 11, "");
+            });
+
+          });
+        }
+      });
+    }
+    function animacionTabla() {
+      var scrollWidth = $(".table-responsive").get(0).scrollWidth;
+      var clientWidth = $(".table-responsive").get(0).clientWidth;
+      $(".table-responsive").animate({ scrollLeft: scrollWidth - clientWidth },
+        {
+          duration: 5000,
+          complete: function () {
+            $(".table-responsive").animate({ scrollLeft: 0 },
+              {
+                duration: 5000,
+                complete: function () {
+                  animatethis(".table-responsive", 5000);
+                }
+              });
+          }
+        });
+    }
+
+    //*********Metodo para abrir drawer
+    function openNav() {
+      $("#mySidenav").css("width", "300px");
+      $(".footerDrawer").show("swing");
+      $(".backDrawer").fadeIn();
+      $(".headMobil").css("display", "none !important");
+    }
+    //*********Metodo para cerrar drawer
+    function closeNav() {
+      $("#mySidenav").css("width", "0px");
+      $(".backDrawer").hide();
+      $(".footerDrawer").hide();
+      $(".headMobil").show();
+    }
+    $(document).ready(function () {
+      //Metodo para marcar posicion tema drawer
+      //Metodo de la master para cambiar estatus de slide
+      window.parent.setEstatusSlide(1, 3);
+      setDrawerFunction(1);
+      //*********Asigna el valor del progreso
+      $(".progressBar").css("width", progreso + "%");
+      $(".btnSalida").click(function () {
+        var st = window.parent.getEstatusSlide(12);
+        if (st == 3) {
+          var prom = window.parent.promediarSlides();
+          if (prom >= 80) {
+            window.parent.cerrarVentana(prom, 0);
+          }
+          else {
+            window.parent.cerrarVentana(prom, 2);
+          }
+        }
+        else {
+          window.parent.cerrarVentana(0, 3);
+        }
+      });
+      $(".btnAtras").click(function () {
+        window.parent.changePage(1, 0, "");
+      });
+      setTimeout(function () {
+        $(".btnAdelante").css("opacity", "1");
+        $(".btnAdelante").click(function () {
+          window.parent.changePage(1, 2, "");
+        });
+      }, 5000);
+    });
+    //Colocar esta linea en los slide que se requiera tener una posicion horizontal
+    //window.onorientationchange = readDeviceOrientation;
+
+  </script>
+</head>
+
+<body>
+  <div class="container-fluid all">
+    <section class="row headMobil d-flex d-md-none justify-content-center">
+      <div class="col-3">
+        <img src="../resources/img/CEC.svg" class="logoCec" alt="CEC">
+      </div>
+      <div class="col-6"></div>
+      <div class="col-3">
+        <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+      </div>
+    </section>
+    <!-- ********SECCION PARA HEADER -->
+    <header class="row header sticky-top">
+      <div class="col-12 headWeb d-flex flex-row flex-nowrap
+          justify-content-between quitaPadding">
+        <div class="d-flex flex-column justify-content-center margenHeader">
+          <!-- <i class="fas fa-ellipsis-h btnDraw" ></i> -->
+          <img src="../resources/img/drawer.svg" class="btnDraw" onclick="openNav()" alt="">
+        </div>
+        <div class="d-flex justify-content-center margenHeader LabelTitulo">
+          <label class="text-center">Evaluación: Procesos administrativos de SRyM</label>
+        </div>
+        <div class="headWebR margenHeader d-flex flex-column
+            justify-content-center">
+          <img src="../resources/img/CEC.svg" class="logoCec d-none d-md-inline" alt="CEC">
+        </div>
+      </div>
+    </header>
+
+    <!-- *******SECCION BODY -->
+    <section class="row body">
+      <div class=" col-12 ">
+        <div class="contenido">
+          <div class="row margin-left">
+            <div class="col-10 offset-1">
+              <p> <span class="enfasis">Antes de comenzar la evaluación</span>, veamos cómo utilizar este material:</p>
+            </div>
+          </div>
+          <div class="row content-body d-flex justify-content-center" style="margin-top: .5em;">
+            <p><strong>Presta mucha atención:</strong></p>
+          </div>
+        </div>
+        <div class="row navegacion espacioMediano d-flex justify-content-center rowContenido">
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <div class="col-3 col-sm-2 offset-1 d-flex justify-content-center align-items-center">
+                <img class="imagenes iconDrawer" src="../resources/img/adelanteatras.svg" alt="Flechas">
+              </div>
+              <div class="col-7 col-sm-8">
+                <p>Desplázate hacia delante y hacia atrás con estos botones.</p>
+              </div>
+            </div>
+            <div class="row d-none">
+              <div class="col-3 col-sm-2 offset-1 d-flex justify-content-center align-items-center">
+                <img class="imagenes iconDrawer" src="../resources/img/TRESPUNTOS.svg" alt="Información importante">
+              </div>
+              <div class="col-7 col-sm-8">
+                <p>Con este botón puedes revisar el índice de temas del material.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 col-sm-2 offset-1 d-flex justify-content-center align-items-center">
+                <img class="btnNota" src="../resources/img/tomanota.svg" alt="Información importante">
+              </div>
+              <div class="col-7 col-sm-8">
+                <p>Lee con atención cada una de las preguntas que aparecerán en la pantalla y responde según corresponda.<br/>
+                  Entre las preguntas encontrarás reactivos de opción múltiple, lista desplegable y relación de pregunta-respuesta por colores.</p>
+                  <!-- <p>Tipos de preguntas: opción múltiple, lista desplegable, completar frase por medio de selección u opción a escribir en el espacio en blanco, relación de pregunta- respuesta por colores y enumeración de pasos</p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <div class="col-3 col-sm-2 col-lg-3 offset-1 d-flex justify-content-center align-items-center">
+                <img class="btnEvaluacion" src="../resources/img/evaluar.svg" alt="Información importante">
+              </div>
+              <div class="col-7 col-sm-8 col-lg-7">
+                <p>En cada una de las preguntas, una vez resueltas, te aparecerá  el botón de evaluar, presiónalo para continuar.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 col-sm-2 col-lg-3 offset-1 d-flex justify-content-center align-items-center">
+                <img class="btnEvaluacion" src="../resources/img/revisar.svg" alt="Información importante">
+              </div>
+              <div class="col-7 col-sm-8 col-lg-7">
+                <p style="margin-bottom: 0;">Una vez concluída tu evaluación, con este botón podrás revisar tus resultados buenos y malos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***SECCION PARA footer -->
+    <section class="footer fixed-bottom">
+      <div class="col-12 quitaPadding d-flex flex-row flex-nowrap
+          justify-content-between align-items-center">
+        <div class="margenFooter">
+          <img src="../resources/img/Atras.svg" class="btnNavegacion btnAtras" alt="Atras">
+        </div>
+        <div class="footerCentro">
+          <div class="d-none d-md-inline margenFooter">
+            <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+          </div>
+        </div>
+        <div class="margenFooter">
+          <img src="../resources/img/Adelante.svg" class="btnNavegacion
+              btnAdelante" alt="Adelante">
+        </div>
+      </div>
+    </section>
+    <!-- ****SECCION BARRA DE PROGRESO -->
+    <section class="progressBar fixed-bottom"></section>
+
+
+  </div>
+  <!-- seccion para el drawer -->
+  <div class="backDrawer bootbox modal fade bootbox-alert show" onclick="closeNav()">
+
+  </div>
+
+  <section id="mySidenav" class="sidenav">
+    <div class="dHeader">
+      <img src="../resources/img/Universidad.svg" alt="">
+    </div>
+    <div class="tituloDrawer">
+      <h3>Índice</h3>
+    </div>
+    <!-- Aqui cambiar por el contenido suyo de ustedes -->
+    <div class="contentDrawer">
+      <ul>
+        <li id="indice1">
+          Instrucciones de navegación
+        </li>
+        <li id="indice2">
+          Ejercicio
+        </li>
+        <li id="indice3">
+          Resultados
+        </li>
+        <li id="indice4">
+          Despedida
+        </li>
+      </ul>
+    </div>
+    <div class="footerDrawer fixed-bottom">
+      <button class="btn btn-link btnSalida">Salida</button>
+    </div>
+  </section>
+</body>
+
+</html>

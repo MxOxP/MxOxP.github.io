@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1,shrink-to-fit=no,minimal-ui" />
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/slide_base.css">
+    <link rel="stylesheet" href="../resources/css/modal.css">
+    <link rel="stylesheet" href="../resources/css/modalSimulador.css">
+    <link rel="stylesheet" href="../resources/css/drawer.css">
+    <link rel="stylesheet" href="../resources/css/slide2_1.css">
+    <link rel="stylesheet" href="../resources/css/slide2_2.css">
+    <link rel="stylesheet" href="../resources/css/pregStyle.css">
+    <link rel="stylesheet" href="../resources/css/evaul.css">
+    <script src="../resources/js/jquery-3.5.1.min.js"></script>
+    <script src="../resources/js/popper.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/js/fontawesome.js"></script>
+    <script src="../resources/js/bootbox.js"></script>
+    <script src="../resources/js/modalRotacion.js"></script>
+    <script src="../resources/js/getSVG.js"></script>
+    <script src="../resources/js/drawerFunction.js"></script>
+    <script src="../resources/js/tituloJS.js"></script>
+    <script src="../resources/js/tituloJS.js"></script>
+    <title>Slide</title>
+    <script>
+        var RotationEnabled = false;
+        var slide_origen = 6;
+        var slide_destino = 7;
+        var slide_anterior = 5;
+        var alto = $(window).height();
+        var ancho = $(window).width();
+        var secuencia_modales = [false, false, false, false, false];
+        function verificaActivos(indice) {
+            contador[indice] = true;
+            var items = 0;
+            $.each(secuencia_modales, function (i, e) {
+                if (e) {
+                    items++;
+                }
+            });
+            var x = (items === secuencia_modales.length);
+            return x;
+        }
+        // Metodo para mostrar modales (Titulo del header,contenido del mensaje,tamaño del dialogo sm,md,lg,xl,Boleano para activar el evento de el cerrado del dialogo)
+        function createDialog(titulo, msg, tamano, activacion) {
+            var dialog = bootbox.dialog({
+                title: titulo,
+                message: msg,
+                size: tamano
+            });
+            dialog.init(function () {
+                // No mover el metodo de abajo ya que es el que marca la X de rojo despues de 3.5s
+                setTimeout(function () {
+                    dialog.find(".close").css("color", "#e2221d");
+                    dialog.find(".close").css("opacity", "1");
+                    dialog.find(".close").css("pointer-events", "all");
+                }, 3000);
+
+                if (activacion) {
+                    $(".bootbox-close-button").click(function () {
+                        //Aqui poner la funcion que se quiera realizar cuando se cierre el modal
+                        setTimeout(function () {
+                            $(".btnAdelante").css("opacity", "1");
+                            $(".btnAdelante").click(function () {
+                                window.parent.changePage(slide_origen, slide_destino, "");
+                            });
+                        }, 5000);
+                        window.parent.setEstatusSlide(slide_origen, 3);
+                        /*$(".btnAdelante").click(function () {
+                            window.parent.changePage(slide_origen, slide_destino, "");
+                        });*/
+
+                    });
+                }
+            });
+        }
+        function animacionTabla() {
+            var scrollWidth = $(".table-responsive").get(0).scrollWidth;
+            var clientWidth = $(".table-responsive").get(0).clientWidth;
+            $(".table-responsive").animate({ scrollLeft: scrollWidth - clientWidth },
+                {
+                    duration: 5000,
+                    complete: function () {
+                        $(".table-responsive").animate({ scrollLeft: 0 },
+                            {
+                                duration: 5000,
+                                complete: function () {
+                                    animatethis(".table-responsive", 5000);
+                                }
+                            });
+                    }
+                });
+        }
+        ///*********SetTime para que aparezca el boton de adelante
+        /*setTimeout(function () {
+            $(".btnAdelante").css("opacity", "1");
+        }, 3000);*/
+
+        //*********Metodo para abrir drawer
+        function openNav() {
+            $("#mySidenav").css("width", "300px");
+            $(".footerDrawer").show("swing");
+            $(".backDrawer").fadeIn();
+            $(".headMobil").css("display", "none !important");
+        }
+        //*********Metodo para cerrar drawer
+        function closeNav() {
+            $("#mySidenav").css("width", "0px");
+            $(".backDrawer").hide();
+            $(".footerDrawer").hide();
+            $(".headMobil").show();
+        }
+        $(document).ready(function () {
+
+            $(".evaul").hide();
+            var hecho = $.trim(window.parent.getCalificacionSlide(6));
+            if (hecho.length <= 0) {
+                var res = document.getElementsByClassName("containerCHK");
+                res[0].addEventListener("click",function(){
+                    $(".evaul").fadeIn();
+                });
+                res[1].addEventListener("click",function(){
+                    $(".evaul").fadeIn();
+                });
+                res[2].addEventListener("click",function(){
+                    $(".evaul").fadeIn();
+                });
+            }
+
+            var total = (100/13)*6;
+            $(".progressBar").css("width",total+"%");
+            alto = $(window).height();
+            ancho = $(window).width();
+            if (ancho > 768) {
+                $(".margenHeader label").html("Evaluación: Procesos administrativos de SRyM");
+            }
+            if (ancho < 800) {
+                $(".margenHeader label").html("Evaluación: Procesos administrativos de SRyM");
+            }
+            //Metodo para marcar posicion tema drawer
+            // setDrawerFunction(1);
+            //Metodo de la master para cambiar estatus de slide
+            // window.parent.setEstatusSlide(2, 3);
+            // Para animar la tabla con scroll
+            //animacionTabla();
+            //Metodo para abrir un modal
+            /*$("#OpenBootBox").click(function () {
+                createDialog("Titulo", "Contenido", "lg", verificaActivos(0));
+            });*/
+            $(".btnAtras").css("opacity",0);
+            //avanceBarra(slide_origen);
+            window.parent.setEstatusSlide(slide_origen, 3);
+            setDrawerFunction(2);
+            recuperaRespuesta(slide_origen);
+            /*$(".btnAdelante").click(function () {
+                validarEjercicio();
+            });*/
+
+        });
+        function siguienteSlide(calificar, calificacion, indiceRes) {
+            if (calificar) {
+                window.parent.setCalificacionSlide(slide_origen, calificacion);
+                window.parent.setRespuestaSlide(slide_origen, indiceRes.toString());
+            }
+            window.parent.setEstatusSlide(slide_origen, 3);
+            window.parent.changePage(slide_origen, slide_destino, "");
+        }
+        //Cambiar arreglo de respuestas el 1 indica la respuesta correcta posicionada sobre el indice del elemento 
+        var reactivos = [[1, 0, 0]];
+        function recuperaRespuesta(slide) {
+            var res = $.trim(window.parent.getCalificacionSlide(slide));
+            //var res = "2";
+            if (res.length > 0) {
+                $(".btnAdelante").css("opacity", "1");
+                $(".evaul").hide();
+                $(".btnAdelante").click(function () {
+                    window.parent.changePage(slide_origen, slide_destino, "");
+                });
+                $(".btnAtras").click(function () {
+                    window.parent.backPage(slide_anterior);
+                });
+                $(".btnAtras").css("opacity","1");
+                $('[tabindex=' + (parseInt(res) + 1) + ']').prop("checked", true);
+                $(".respuesta").prop("disabled", true);
+                $("#respuestasCHK").attr("class", "evaluado");
+                if (reactivos[0][parseInt(res)] === 1) {
+                    $("#textoRetro").html("Correcto");
+                    $(".resultadoLabel").css("background-color", "green");
+                } else {
+                    $("#textoRetro").html("Incorrecto");
+                    $(".resultadoLabel").css("background-color", "red");
+                }
+                $(reactivos[0]).each(function (i, e) {
+                    console.log(e + "  " + i);
+                    if (e === 1) {
+                        $('[tabindex=' + (i + 1) + ']').parent(".containerCHK").addClass("remarcaCorrecta");
+                    }
+                });
+                $(".resultadoLabel").show();
+            } else {
+                $(".btnAdelante").css("opacity", "0");
+                //$(".evaul").show();
+                $(".evaul").click(function () {
+                    validarEjercicio();
+                });
+            }
+        }
+
+        function validarEjercicio() {
+            var correctos = 0;
+            var Ncontestados = 0;
+            var calificacion = 0;
+            var indiceRes = -1;
+            $(".respuesta").each(function (i, e) {
+                if ($(this).is(":checked")) {
+                    Ncontestados++;
+                }
+            });
+
+            if (Ncontestados === 0) {
+                createDialog("Respuesta no válida", "Debes completar la pregunta antes de enviarla.", false);
+            } else {
+                if (Ncontestados === reactivos.length) {
+                    var nivel = 0;
+                    $(".respuesta").each(function (i, e) {
+                        if ($(this).is(":checked")) {
+                            indiceRes = i;
+                            if (reactivos[nivel][i] === 1) {
+                                correctos++;
+                            }
+                            nivel++;
+                        }
+                    });
+                    if (correctos === reactivos.length) {
+                        calificacion = 10;
+                        createDialog("¡Correcto!", "Has seleccionado la respuesta correcta.</br><div style='text-align:center;'><button class='btn btn-ado' style='margin-top: 1em;width: 60%;' onclick='siguienteSlide(true," + calificacion + "," + indiceRes + ");'>Continuar</button></div>", false);
+                        $(".modal-header").addClass("correcto");
+                        $(".modal-content").addClass("correctoL");
+                        $(".close").hide();
+                    } else {
+                        calificacion = 0;
+                        createDialog("¡Incorrecto!", "¡Ups! No es la respuesta correcta.</br><div style='text-align:center;'><button class='btn btn-ado' style='margin-top: 1em;width: 60%;' onclick='siguienteSlide(true," + calificacion + "," + indiceRes + ");'>Continuar</button></div>", false);
+                        $(".modal-header").addClass("incorrecto");
+                        $(".modal-content").addClass("incorrectoL");
+                        $(".close").hide();
+                    }
+                } else {
+                    createDialog("Respuesta no válida", "Debes completar la pregunta antes de enviarla.", false);
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid all">
+        <section class="row headMobil d-flex d-md-none justify-content-center">
+            <div class="col-3">
+                <img src="../resources/img/CEC.svg" class="logoCec" alt="CEC">
+            </div>
+            <div class="col-6"></div>
+            <div class="col-3">
+                <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+            </div>
+        </section>
+        <!-- ********SECCION PARA HEADER -->
+        <header class="row header sticky-top">
+            <div class="col-12 headWeb d-flex flex-row flex-nowrap
+          justify-content-between quitaPadding">
+                <div class="d-flex flex-column justify-content-center margenHeader">
+                    <!-- <i class="fas fa-ellipsis-h btnDraw" ></i> -->
+                    <img src="../resources/img/drawer.svg" class="btnDraw" onclick="openNav()" alt="">
+                </div>
+                <div class="d-flex justify-content-center margenHeader LabelTitulo">
+                    <label class="text-center">Evaluación: Procesos administrativos de SRyM</label>
+                </div>
+                <div class="headWebR margenHeader d-flex flex-column
+            justify-content-center">
+                    <img src="../resources/img/CEC.svg" class="logoCec d-none d-md-inline" alt="CEC">
+                </div>
+            </div>
+        </header>
+
+        <!-- *******SECCION BODY -->
+        <section class="row body">
+ 
+            <div class="col-12">
+                <!-- ESTO ES PARA LOS TITULOS CON PLECA -->
+                <div class="row">
+                    <!--<div class="textBorder padding-Titulo">
+                        <h5 class="textoSubtitulo">
+                            <strong class="colorSubtitulo">Instrucciones: Lee la pregunta y selecciona la respuesta correcta.</strong>
+                        </h5>
+                    </div>-->
+                    <div class="col-12 col-md-12 resultadoLabel text-center"
+                        style="display: none;padding: 0px;color: white;margin-top:1em;">
+                        <p id="textoRetro" style="margin-bottom: 0;">Correcto</p>
+                    </div>
+                </div>
+
+                <div class="row rowContenido" style="font-size: 0.82em; margin-left: 0.2em;">
+                    <div class="col-10 offset-1">
+                        <strong class="textoSubtitulo"><span class="enfasis">Instrucciones: </span>Lee la pregunta y selecciona la respuesta correcta.</strong>
+                    </div>
+                </div>
+
+                <div id="contentSlide" class="col-10 offset-1">
+                    <div class="row rowContenido">
+                        <div class="col-12 col-md-12 d-flex flex-column justify-content-center">
+                            <div class="pCajaResaltada pregBox">
+                                <p>5.</p>
+                                <p>¿Cuál es el nombre del tablero que te permitirá gestionar el Sistema de Reportes del negocio, Análisis e Inteligencia (antes llamado SIG)?<strong><span class="enfasis"></span></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- - - - - - - - - - -->
+                    <!--<div class="row rowContenido" style="margin-top: 0em;">-->
+                    <div class="row rowContenido" style="font-size: 1.0em; margin-top: 2em;">
+                      <div class="col-10 offset-1  d-flex flex-column
+                          justify-content-center">
+
+                        <div style="padding-left: 0.8em;" id="respuestasCHK">
+                            <label class="containerCHK d-flex flex-column justify-content-center">
+                                BRAIN.
+                                <input type="radio" name="radio" tabindex="1" class="respuesta">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="containerCHK d-flex flex-column justify-content-center">
+                                ERPCO.
+                                <input type="radio" name="radio" tabindex="2" class="respuesta">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="containerCHK d-flex flex-column justify-content-center">
+                                SARCAN.
+                                <input type="radio" name="radio" tabindex="3" class="respuesta">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                      </div>
+
+                      <div  class="col-8 offset-2 offset-sm-1 col-sm-4 offset-sm-4 evaul">
+                            Evaluar
+                        </div>
+                    </div>
+                    <!-- - - - - - - - - - -->
+                <!--</div>-->
+            </div>
+        </section>
+
+        <!-- ***SECCION PARA footer -->
+        <section class="footer fixed-bottom">
+            <div class="col-12 quitaPadding d-flex flex-row flex-nowrap
+          justify-content-between align-items-center">
+                <div class="margenFooter">
+                    <img src="../resources/img/Atras.svg" class="btnNavegacion btnAtras" alt="Atras">
+                </div>
+                <div class="footerCentro">
+                    <div class="d-none d-md-inline margenFooter">
+                        <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+                    </div>
+                </div>
+                <div class="margenFooter">
+                    <img src="../resources/img/Adelante.svg" class="btnNavegacion
+              btnAdelante" alt="Adelante">
+                </div>
+            </div>
+        </section>
+        <!-- ****SECCION BARRA DE PROGRESO -->
+        <section class="progressBar fixed-bottom"></section>
+
+
+    </div>
+    <!-- seccion para el drawer -->
+    <div class="backDrawer bootbox modal fade bootbox-alert show" onclick="closeNav()">
+
+    </div>
+
+    <section id="mySidenav" class="sidenav">
+        <div class="dHeader">
+            <img src="../resources/img/Universidad.svg" alt="">
+        </div>
+        <div class="tituloDrawer">
+            <h3>Índice</h3>
+        </div>
+        <!-- Aqui cambiar por el contenido suyo de ustedes -->
+        <div class="contentDrawer">
+            <ul>
+            <li class="visto">
+                Instrucciones de navegación
+            </li>
+            <li class="">
+                Ejercicio
+            </li>
+            <li>
+                Resultados
+            </li>
+            <li id="indice4">
+              Despedida
+            </li>
+        </ul>
+        </div>
+        <div class="footerDrawer fixed-bottom">
+            <button class="btn btn-link" onclick="window.parent.salir();">Salida</button>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.evaul{
+    border: 2px solid #5F2167;
+    border-radius: 10px;
+    background-color: #5F2167;
+    font-weight: bold;
+    color: #EEEEEE;
+    font-size: 1.2em;
+    text-align: center;
+}
+.evaul:hover{
+    cursor: pointer;
+    background-color: #5F2167FF;
+    color: #DA291C;
+}

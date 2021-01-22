@@ -1,0 +1,118 @@
+.btnEvaluacion{
+    width: 4em;
+  }
+.btnNota{
+    width: 4.3rem;
+  }
+/* col */
+@media (max-width: 575.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 20px;
+  }
+}
+/* // Small devices (landscape phones, 576px and up) */
+/* sm */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 20px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+/* md */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 22px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+/* lg */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 22px;
+  }
+  .btnEvaluacion{
+    width: 5.5em;
+  }
+}
+/* // Extra large devices (large desktops, 1200px and up) */
+/* xl */
+@media (min-width: 1200px) and (max-width: 1423.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 24px;
+  }
+  .btnEvaluacion{
+    width: 5.5em;
+  }
+}
+@media (min-width: 1424px) and (max-width: 1649.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 28px;
+  }
+  .btnEvaluacion{
+    width: 5.5em;
+  }
+}
+@media (min-width: 1650px) and (max-width: 1744.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 30px;
+  }
+  .btnEvaluacion{
+    width: 5.5em;
+  }
+}
+@media (min-width: 1745px) {
+  body {
+    font-family: RamsL;
+    font-size: 35px;
+  }
+  .btnEvaluacion{
+    width: 5.5em;
+  }
+}
+
+@media (max-width: 575.98px) and (orientation: landscape) {
+  body {
+    font-size: 15px !important;
+  }
+  header {
+    margin-top: -1px;
+  }
+}
+
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 20px;
+  }
+  header {
+    margin-top: -1px;
+  }
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 1199.98px) {
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+  

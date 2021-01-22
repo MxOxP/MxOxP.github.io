@@ -1,0 +1,61 @@
+.btn-ado{
+	font-size: 0.8em;
+}
+
+.note{
+	width: 10vw;
+}
+
+.note2{
+  width: 6.5vw;
+}
+
+@media (max-width: 575.98px) { 
+  .centrolittle{
+    text-align: center;
+  }
+ }
+
+ @media (max-width: 767.98px){
+ 	.note{
+		width: 20vw;
+	}
+  .note2{
+    width: 14vw;
+  }
+ }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .icon-col{
+      font-size: 30vw;
+    }
+  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+ }
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1423.98px)  { 
+  .puntaje{
+  	margin-bottom: 0px;
+  }
+
+  .btn-ado{
+  	font-size: 0.8em;
+  }
+ }
+ @media (min-width: 1424px) and (max-width: 1649.98px)  { 
+
+ }
+ @media (min-width: 1650px) and (max-width: 1744.98px)  { 
+
+ }
+ @media (min-width: 1745px)  { 
+
+ }
