@@ -43,6 +43,7 @@
         //Colocar el numero del slide siguiente de acuerdo a la navegación que se desea.
         var slide_destino = 10;
         var slide_anterior = 8;
+        //------------------------------------------------------------------------------------
         var alto = $(window).height();
         var ancho = $(window).width();
         var secuencia_modales = [false, false, false, false, false];
@@ -56,53 +57,6 @@
             });
             var x = (items === secuencia_modales.length);
             return x;
-        }
-        // Metodo para mostrar modales (Titulo del header,contenido del mensaje,tamaño del dialogo sm,md,lg,xl,Boleano para activar el evento de el cerrado del dialogo)
-        function createDialog(titulo, msg, tamano, activacion) {
-            var dialog = bootbox.dialog({
-                title: titulo,
-                message: msg,
-                size: tamano
-            });
-            dialog.init(function () {
-                // Marca la X en rojo
-                setTimeout(function () {
-                    dialog.find(".close").css("color", "#e2221d");
-                    dialog.find(".close").css("opacity", "1");
-                    dialog.find(".close").css("pointer-events", "all");
-                }, 3000);
-
-                if (activacion) {
-                    $(".bootbox-close-button").click(function () {
-                        //Aqui poner la funcion que se quiera realizar cuando se cierre el modal
-                        setTimeout(function () {
-                            $(".btnAdelante").css("opacity", "1");
-                        }, 5000);
-                        window.parent.setEstatusSlide(slide_origen, 3);
-                        $(".btnAdelante").click(function () {
-                            window.parent.changePage(slide_origen, slide_destino, "");
-                        });
-
-                    });
-                }
-            });
-        }
-        function animacionTabla() {
-            var scrollWidth = $(".table-responsive").get(0).scrollWidth;
-            var clientWidth = $(".table-responsive").get(0).clientWidth;
-            $(".table-responsive").animate({ scrollLeft: scrollWidth - clientWidth },
-                {
-                    duration: 5000,
-                    complete: function () {
-                        $(".table-responsive").animate({ scrollLeft: 0 },
-                            {
-                                duration: 5000,
-                                complete: function () {
-                                    animatethis(".table-responsive", 5000);
-                                }
-                            });
-                    }
-                });
         }
 
         //*********Metodo para abrir drawer
