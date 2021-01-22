@@ -22,7 +22,7 @@
 		</style>
 		<script>
 			function yacargo(){
-				document.getElementById("Frame_slide").contentWindow.document.getElementsByTagName("div").setAttribute("contenteditable","true");
+				document.getElementById("Frame_slide").contentWindow.document.getElementsByTagName("div")[0].setAttribute("contenteditable","true");
 			}
 			window.onload = function() {
 			  let btn = document.getElementById("btn");
@@ -33,7 +33,7 @@
 			  	console.log(frame);
 			  	console.log(frame.contentWindow.document);
 			  	//let texto = frame.contentWindow.document.toString();
-			  	document.getElementById("Frame_slide").contentWindow.document.getElementsByTagName("div").removeAttribute("contenteditable");
+			  	document.getElementById("Frame_slide").contentWindow.document.getElementsByTagName("div")[0].removeAttribute("contenteditable");
 
 			  	let bridge = document.getElementById("Frame_slide").contentWindow.document.getElementsByTagName("html")[0].innerHTML.toString();
 			  	let texto = "<!DOCTYPE html><html lang='es'>" + bridge + "</html>";
