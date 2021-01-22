@@ -21,6 +21,9 @@
 			}
 		</style>
 		<script>
+			function yacargo(){
+				document.getElementById("Frame_slide").contentWindow.document.getElementsByTagName("div").setAttribute("contenteditable","true");
+			}
 			window.onload = function() {
 			  let btn = document.getElementById("btn");
 			  //console.log(btn);
@@ -30,6 +33,8 @@
 			  	console.log(frame);
 			  	console.log(frame.contentWindow.document);
 			  	//let texto = frame.contentWindow.document.toString();
+			  	document.getElementById("Frame_slide").contentWindow.document.getElementsByTagName("div").removeAttribute("contenteditable");
+
 			  	let bridge = document.getElementById("Frame_slide").contentWindow.document.getElementsByTagName("html")[0].innerHTML.toString();
 			  	let texto = "<!DOCTYPE html><html lang='es'>" + bridge + "</html>";
 			  	var blob = new Blob([texto], {type: "text/plain;charset=utf-8"});
@@ -38,7 +43,7 @@
 			  //saveAs(blob, "testfile1.txt");
 			};
 		</script>
-		<iframe id="Frame_slide" title="uno" width="100%" height="500" src="slide9.html"></iframe>
+		<iframe id="Frame_slide" title="uno" width="100%" height="500" src="slide9.html" onload="yacargo();"></iframe>
 		<div class="btn" id="btn">
 			Prueba
 		</div>

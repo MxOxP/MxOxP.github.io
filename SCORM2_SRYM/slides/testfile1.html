@@ -1,0 +1,486 @@
+<!DOCTYPE html><html lang='es'><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1,shrink-to-fit=no,minimal-ui">
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/slide_base.css">
+    <link rel="stylesheet" href="../resources/css/modal.css">
+    <link rel="stylesheet" href="../resources/css/modalSimulador.css">
+    <link rel="stylesheet" href="../resources/css/dialogo.css">
+    <link rel="stylesheet" href="../resources/css/drawer.css">
+    <link rel="stylesheet" href="../resources/css/slides.css">
+    <link rel="stylesheet" href="../resources/css/slide9.css">
+    <link rel="stylesheet" href="../resources/css/evaul.css">
+    <link rel="stylesheet" href="../resources/fontAwesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../resources/fontAwesome/css/regular.min.css">
+    <link rel="stylesheet" href="../resources/fontAwesome/css/solid.min.css">
+    <script src="../resources/js/jquery-3.5.1.min.js"></script>
+    <script src="../resources/js/popper.min.js"></script>
+    <script src="../resources/js/bootstrap.min.js"></script>
+    <script src="../resources/fontAwesome/js/fontawesome.min.js"></script>
+    <script src="../resources/js/bootbox.js"></script>
+    <script src="../resources/js/modalRotacion.js"></script>
+    <script src="../resources/js/getSVG.js"></script>
+    <script src="../resources/js/drawerFunction.js"></script>
+    <script src="../resources/js/tituloJS.js"></script>
+    <title>Slide</title>
+    <script>
+
+        //Escribir el numero del data-index de la opcion que sera considerada como correcta
+        var resCorrecta = 4;
+        //Colocar en true si el slide puede ser visualizado solo de forma horizontal
+        var RotationEnabled = false;
+        //Colocar el numero de posicion del drawer
+        var slide_drawer = 2;
+        //Colocar el numero del slide actual
+        var slide_origen = 9;
+        //Colocar el numero del slide siguiente de acuerdo a la navegación que se desea.
+        var slide_destino = 10;
+        var slide_anterior = 8;
+        var alto = $(window).height();
+        var ancho = $(window).width();
+        var secuencia_modales = [false, false, false, false, false];
+        function verificaActivos(indice) {
+            contador[indice] = true;
+            var items = 0;
+            $.each(secuencia_modales, function (i, e) {
+                if (e) {
+                    items++;
+                }
+            });
+            var x = (items === secuencia_modales.length);
+            return x;
+        }
+        // Metodo para mostrar modales (Titulo del header,contenido del mensaje,tamaño del dialogo sm,md,lg,xl,Boleano para activar el evento de el cerrado del dialogo)
+        function createDialog(titulo, msg, tamano, activacion) {
+            var dialog = bootbox.dialog({
+                title: titulo,
+                message: msg,
+                size: tamano
+            });
+            dialog.init(function () {
+                // Marca la X en rojo
+                setTimeout(function () {
+                    dialog.find(".close").css("color", "#e2221d");
+                    dialog.find(".close").css("opacity", "1");
+                    dialog.find(".close").css("pointer-events", "all");
+                }, 3000);
+
+                if (activacion) {
+                    $(".bootbox-close-button").click(function () {
+                        //Aqui poner la funcion que se quiera realizar cuando se cierre el modal
+                        setTimeout(function () {
+                            $(".btnAdelante").css("opacity", "1");
+                        }, 5000);
+                        window.parent.setEstatusSlide(slide_origen, 3);
+                        $(".btnAdelante").click(function () {
+                            window.parent.changePage(slide_origen, slide_destino, "");
+                        });
+
+                    });
+                }
+            });
+        }
+        function animacionTabla() {
+            var scrollWidth = $(".table-responsive").get(0).scrollWidth;
+            var clientWidth = $(".table-responsive").get(0).clientWidth;
+            $(".table-responsive").animate({ scrollLeft: scrollWidth - clientWidth },
+                {
+                    duration: 5000,
+                    complete: function () {
+                        $(".table-responsive").animate({ scrollLeft: 0 },
+                            {
+                                duration: 5000,
+                                complete: function () {
+                                    animatethis(".table-responsive", 5000);
+                                }
+                            });
+                    }
+                });
+        }
+
+        //*********Metodo para abrir drawer
+        function openNav() {
+            $("#mySidenav").css("width", "300px");
+            $(".footerDrawer").show("swing");
+            $(".backDrawer").fadeIn();
+            $(".headMobil").css("display", "none !important");
+        }
+        //*********Metodo para cerrar drawer
+        function closeNav() {
+            $("#mySidenav").css("width", "0px");
+            $(".backDrawer").hide();
+            $(".footerDrawer").hide();
+            $(".headMobil").show();
+        }
+
+        function demostrar(){
+            //console.log($(".opciones").hasClass("opciones_select"));
+            var hecho = $.trim(window.parent.getCalificacionSlide(slide_origen));
+            if (hecho.length <= 0) {
+                    setTimeout(function(){ 
+                    if($(".respuesta").val().length == 0){
+                    $(".evaul").hide();
+                    }else{
+                        $(".evaul").fadeIn();
+                    }
+                }, 100);
+            }
+        }
+
+        $(document).ready(function () {
+
+            //Para aparecer el boton evaluar cuando se da click sobre una opcion
+            $(".evaul").hide();
+            var res = document.getElementsByClassName("respuesta");
+            res[0].addEventListener("click",function(){
+                demostrar();
+            });
+
+            var brr = document.getElementsByClassName("btnBorrador");
+            brr[0].addEventListener("click",function(){
+                demostrar();
+            });
+
+            var total = (100/13)*slide_origen;
+            $(".progressBar").css("width",total+"%");
+            $(".btnAtras").css("opacity",0);
+            window.parent.setEstatusSlide(slide_origen, 3);
+            setDrawerFunction(slide_drawer);
+            let activaono = recuperar();
+            if(activaono == false){
+                relacionaColumnas();
+            }else{
+                //Ya fue contestada.
+            }
+
+        });
+        function recuperar(){
+            let confirma = false;
+            let res = $.trim(window.parent.getCalificacionSlide(slide_origen));
+            console.log("Hola entre a la funcion recuperar :d");
+            console.log(res);
+            if (res.length > 0) {
+                $(".btnAdelante").css("opacity", "1");
+                $(".evaul").hide();
+                $(".btnAdelante").click(function () {
+                    window.parent.changePage(slide_origen, slide_destino, "");
+                });
+                $(".btnAtras").click(function () {
+                    window.parent.backPage(slide_anterior);
+                });
+                $(".btnAtras").css("opacity","1");
+                $(`#o${res}`).addClass("opciones_relacionada");
+                $(".respuesta").val($(`#o${res}`).children().html());
+                if(res == resCorrecta){
+                    $("#textoRetro").html("Correcto");
+                    $(".resultadoLabel").css("background-color", "green");
+
+                }else{
+                    $("#textoRetro").html("Incorrecto");
+                    $(".resultadoLabel").css("background-color", "red");
+
+                    $(`.marcador${resCorrecta + 1}`).css("display","initial");
+                }
+                //.......... Marcar la respuesta seleccionada ............
+                //........................................................
+                $(".resultadoLabel").show();
+            } else {
+                $(".btnAdelante").css("opacity", "0");
+                $(".evaul").click(function () {
+                    validarEjercicio();
+                });
+            }
+            if(res.length > 0){
+                confirma = true;
+            }else{
+                confirma = false;
+            }
+            return confirma;
+        }
+
+        function siguienteSlide(calificar, calificacion,correcto) {
+            if (calificar) {
+                console.log("hola voy a asignar una calificacion y es:");
+                console.log(calificacion);
+                window.parent.setCalificacionSlide(slide_origen,calificacion);
+                window.parent.setRespuestaSlide(slide_origen, correcto);
+                //window.parent.setCalificacionSlide(slide_origen, calificacion);
+                console.log($.trim(window.parent.getCalificacionSlide(slide_origen)));
+            }
+            window.parent.setEstatusSlide(slide_origen, 3);
+            window.parent.changePage(slide_origen, slide_destino, "");
+        }
+        function validarEjercicio() {
+            var reactivos = [resCorrecta];
+            var correctos = 0;
+            var Ncontestados = 0;
+            var calificacion = 0;
+            $(".respuesta").each(function (i, e) {
+                if ($.trim($(this).val()).length > 0) {
+                    Ncontestados++;
+                }
+            });
+
+            if (Ncontestados === 0) {
+                createDialog("Respuesta no válida", "Debes completar la pregunta antes de enviarla.", false);
+            } else {
+                if (Ncontestados === reactivos.length) {
+                    $(".respuesta").each(function (i, e) {
+                        if (parseInt($(this).attr("data-index")) === reactivos[i]) {
+                            correctos++;
+                        }
+                    });
+                    calificacion = ((correctos / reactivos.length) * 10);
+                    if (correctos === reactivos.length) {
+                        createDialog("¡Correcto!", "Has seleccionado la respuesta correcta.</br><div style='text-align:center;'><button class='btn btn-ado' style='margin-top: 1em;width: 60%;' onclick='siguienteSlide(true," + calificacion + "," + parseInt($(".opciones_relacionada").attr("data-index")) + ");'>Continuar</button></div>", false);
+                        $(".modal-header").addClass("correcto");
+                        $(".modal-content").addClass("correctoL");
+                        $(".close").hide();
+                    } else {
+                        createDialog("¡Incorrecto!", "¡Ups! No es la respuesta correcta.</br><div style='text-align:center;'><button class='btn btn-ado' style='margin-top: 1em;width: 60%;' onclick='siguienteSlide(true," + calificacion + "," + parseInt($(".opciones_relacionada").attr("data-index")) +  ");'>Continuar</button></div>", false);
+                        $(".modal-header").addClass("incorrecto");
+                        $(".modal-content").addClass("incorrectoL");
+                        $(".close").hide();
+                    }
+                } else {
+                    createDialog("Incorrecto", "¡Ups! No es la respuesta correcta.</br><strong><span>RECUERDA: Las Siglas SIG significan Sistema de Información Gerencial.</span></strong></br><div style='text-align:center;'><button class='btn btn-ado' style='margin-top: 1em;width: 60%;' onclick='siguienteSlide(true," + calificacion + "," + parseInt($(".opciones_relacionada").attr("data-index")) +  ");'>Continuar</button></div>", false);
+                    $(".close").hide();
+                }
+            }
+        }
+        function relacionaColumnas() {
+            $(".opciones").click(function () {
+                if (!$(this).hasClass("opciones_relacionada")) {
+                    var seleccionado = false;
+                    if (!$(this).hasClass("opciones_select")) {
+                        $(".opciones").each(function () {
+                            if ($(this).hasClass("opciones_select")) {
+                                seleccionado = true;
+                            }
+                        });
+                        if (!seleccionado) {
+                            $(this).addClass("opciones_select");
+                        }
+                    } else {
+                        $(this).removeClass("opciones_select");
+                    }
+                }
+            });
+            $(".respuesta").click(function () {
+                if ($(this).val().length === 0) {
+                    var seleccionado = false;
+                    var option;
+                    $(".opciones").each(function () {
+                        if ($(this).hasClass("opciones_select")) {
+                            seleccionado = true;
+                            option = $(this);
+                        }
+                    });
+                    if (seleccionado) {
+                        $(this).val($(option).text());
+                        $(this).attr("data-index", $(option).attr("data-index"));
+                        $(this).siblings(".btnBorrador").removeAttr("style");
+                        $(option).addClass("opciones_relacionada");
+                        $(option).removeClass("opciones_select");
+                    }
+                }
+            });
+            $(".btnBorrador").click(function () {
+                var txt = $(this).siblings(".respuesta");
+                var btn = $(this);
+                $(".opciones").each(function () {
+                    if ($(this).text() == $(txt).val()) {
+                        $(txt).val("");
+                        $(txt).attr("data-index", "");
+                        $(this).removeClass("opciones_relacionada");
+                        $(this).removeClass("opciones_select");
+                        $(btn).attr("style", "display:none;");
+
+                    }
+                });
+            });
+        }
+
+    </script>
+    <style>
+        .instrucciones{
+            font-size: 0.82em; 
+            margin-left: 0.2em;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .mg-03{
+            margin-right: 0.3em;
+        }
+        .btn-ado:hover {
+            color: #DA291C;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid all">
+        <section class="row headMobil d-flex d-md-none justify-content-center">
+            <div class="col-3">
+                <img src="../resources/img/CEC.svg" class="logoCec d-none" alt="CEC">
+            </div>
+            <div class="col-6"></div>
+            <div class="col-3">
+                <img src="../resources/img/Mobility.svg" class="logoMobility d-none" alt="Mobility">
+            </div>
+        </section>
+        <!-- ********SECCION PARA HEADER -->
+        <header class="row header sticky-top">
+            <div class="col-12 headWeb d-flex flex-row flex-nowrap
+          justify-content-between quitaPadding">
+                <div class="d-flex flex-column justify-content-center margenHeader">
+                    <img src="../resources/img/drawer.svg" class="btnDraw" onclick="openNav()" alt="">
+                </div>
+                <div class="d-flex justify-content-center margenHeader LabelTitulo">
+                    <!-- Aqui es donde se cambia el titulo -->
+                    <label class="text-center">Evaluación: Procesos administrativos de SRyM</label>
+                </div>
+                <div class="headWebR margenHeader d-flex flex-column
+            justify-content-center">
+                    <img src="../resources/img/CEC.svg" class="logoCec d-md-inline" alt="CEC">
+                </div>
+            </div>
+        </header>
+
+        <!-- *******SECCION BODY -->
+        <section class="row body">
+
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-12 resultadoLabel text-center" style="display: none;padding: 0px;color: white;margin-top:1em;">
+                        <p id="textoRetro" style="margin-bottom: 0;">Correcto</p>
+                    </div>
+                </div>
+
+                <div class="row rowContenido instrucciones">
+                    <div class="col-10 offset-1">
+                        <!-- Aqui se escribe el texto que se desea aparezca en las instrucciones -->
+                        <p class="textoSubtitulo bold" contenteditable="true"><span class="enfasis">Este es un cambio sobre la base: La base fue modificada</span></p>
+                    </div>
+                </div>
+                <style>
+                    .mg-03{
+                        margin-right: 0.3em;
+                    }
+                </style>
+                <div id="contentSlide" class="col-10 offset-1">
+                    <div class="row rowContenido">
+                        <div class="col-12 d-flex">
+                            <div class="pregBox d-flex">
+                                <!-- Aqui se redacta la pregunta/reactivo -->
+                                <p class="mg-03">8. </p>
+                                <div>
+                                    Esta es una pregunta de ejemplo
+                                    <fieldset>
+                                        <div class="input-group">
+                                            <input type="text" class="respuesta form-control" data-index="" readonly="" placeholder="">
+                                            <div class="input-group-append btnBorrador" style="display: none;">
+                                                <span class="input-group-text"><span class="fas fa-eraser borrador" aria-hidden="true"></span></span>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    aqui se puede redactar.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .marcador{
+                            position: absolute;
+                            right: 0;
+                        }
+                        .marcador.fa-check {
+                            color: #43AB6C !important;
+                            background: #fff;
+                            padding: 1%;
+                            border-radius: 50%;
+                        }
+                    </style>
+                    <div class="row rowContenido">
+                        <div class="col-10 offset-1 col-sm-6 offset-sm-0 d-flex flex-column justify-content-center">
+                            <!-- Aqui se colocan las opciones de respuesta -->
+                            <span class="opciones opciones-margin" data-index="0" tabindex="1" id="o0" contenteditable="true">Chocolate<span class="marcador marcador1 fas fa-check" aria-hidden="true" style="display: none;"></span></span>
+
+                            <span class="opciones opciones-margin" data-index="1" tabindex="2" id="o1"><span>Respuesta 2</span><span class="marcador marcador2 fas fa-check" aria-hidden="true" style="display: none;"></span></span>
+
+                        </div>
+                        <div class="col-10 offset-1 col-sm-4 offset-sm-2 text-center">
+                            <img src="../resources/img/images/calendarioCheck.png" class="ddImage" style="margin: 0 auto;">
+                            <div class="col-12 evaul" style="display: none;">
+                                Evaluar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ***SECCION PARA footer -->
+        <section class="footer fixed-bottom">
+            <div class="col-12 quitaPadding d-flex flex-row flex-nowrap
+          justify-content-between align-items-center">
+                <div class="margenFooter">
+                    <img src="../resources/img/Atras.svg" class="btnNavegacion btnAtras" alt="Atras" style="opacity: 0;">
+                </div>
+                <div class="footerCentro">
+                    <div class="d-md-inline margenFooter">
+                        <img src="../resources/img/Mobility.svg" class="logoMobility" alt="Mobility">
+                    </div>
+                </div>
+                <div class="margenFooter">
+                    <img src="../resources/img/Adelante.svg" class="btnNavegacion
+              btnAdelante" alt="Adelante">
+                </div>
+            </div>
+        </section>
+        <!-- ****SECCION BARRA DE PROGRESO -->
+        <section class="progressBar fixed-bottom" style="width: 69.2308%;"></section>
+
+
+    </div>
+    <!-- seccion para el drawer -->
+    <div class="backDrawer bootbox modal fade bootbox-alert show" onclick="closeNav()">
+
+    </div>
+
+    <section id="mySidenav" class="sidenav">
+        <div class="dHeader">
+            <img src="../resources/img/Universidad.svg" alt="">
+        </div>
+        <div class="tituloDrawer">
+            <h3>Índice</h3>
+        </div>
+        <!-- Drawer --> 
+        <div class="contentDrawer">
+            <ul>
+            <li class="visto">
+                Instrucciones de navegación
+            </li>
+            <li class="">
+                Ejercicio
+            </li>
+            <li>
+                Resultados
+            </li>
+            <li id="indice4">
+              Despedida
+            </li>
+        </ul>
+          </div>
+        <div class="footerDrawer fixed-bottom">
+            <button class="btn btn-link" onclick="window.parent.salir();">Salida</button>
+        </div>
+    </section>
+
+
+<div class="bootbox modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="z-index: 1051;"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header"><h5 class="modal-title"><span class="parpadea" id="jsinject">ALERTA</span><script>$('#jsinject').parent().parent().parent().parent().parent().css('z-index','1051');</script></h5></div><div class="modal-body"><div class="bootbox-body"><p>Para tener una mejor experiencia coloca tu dispositivo en una posición horizontal.</p><div><img src="../resources/img/girar_dispositivo.gif" alt="rotacion" id="rotacion" class="img-fluid"></div></div></div></div></div></div></body></html>
