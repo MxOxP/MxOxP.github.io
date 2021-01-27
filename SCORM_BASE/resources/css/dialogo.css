@@ -1,0 +1,32 @@
+*::before{box-sizing: border-box;}
+@font-face{
+    font-family: Rams;
+    src: url("../tipoGrafia/Rams.otf");
+  }
+  @font-face{
+    font-family: RamsL;
+    src: url("../tipoGrafia/RamsLigth.otf");
+  }
+
+.globo{
+  padding: 0.7em;
+  border-radius: 10px;
+  font-family: Rams;
+  z-index: 1; 
+  font-size: 1em;
+  background-color: white;
+  filter: drop-shadow(0px 0px 0px) ;
+  box-shadow: 0 0 15px #5f2167;
+}
+
+.globo::before{
+  content: '';
+  position: absolute; 
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  left: -5px;
+  top: 50px;
+  background-color: white;
+  transform: skewX(45deg);
+}

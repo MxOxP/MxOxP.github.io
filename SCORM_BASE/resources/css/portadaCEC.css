@@ -1,0 +1,130 @@
+@font-face {
+    font-family: RamsL;
+    src: url("../tipoGrafia/RamsLigth.otf");
+}
+
+.Inicio {
+    background: #5F2167;
+    color: white;
+}
+
+.icons {
+    width: 5em;
+    margin: .9em .3em 0em .3em;
+}
+
+.Inicio label {
+    text-align: center;
+    font-style: RamsL !important;
+    font-size: 1.8em;
+}
+
+.iconInicio {
+    width: 3em;
+    cursor: pointer;
+}
+
+.InicioB {
+    text-align: center;
+}
+
+.InicioB img {
+    /* margin-top: 2.8em; */
+    margin-top: 2em;
+}
+
+.fontoPortada {
+    background-color: #D9DDFA;
+}
+
+.imgPortada {
+    width: 100%;
+    margin-top: 0 auto;
+    /*padding: 1em;*/
+}
+
+.img {
+
+    
+    /*
+    
+    *CF
+    En esta linea puedes cambiar la imagen a mostrar en la portada
+    
+    */
+    background-image: url("../img/portada.svg");
+
+
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-color: #dbdbfb;
+}
+
+.imgMov {
+    height: 50vh;
+}
+
+@media (max-width: 575.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 15px;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 15px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 18px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 20px;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) and (max-width: 1423.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1424px) and (max-width: 1649.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1650px) and (max-width: 1744.98px) {
+    body {
+        font-family: RamsL;
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1745px) {
+    body {
+        font-family: RamsL;
+        font-size: 35px;
+    }
+}

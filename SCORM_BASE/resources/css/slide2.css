@@ -1,0 +1,30 @@
+.section {
+    fill: #CCCCCC;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+#mapa_interactivo{
+    width: 95%;
+    margin: 0 auto;
+}
+.content_mapa{
+    width: 100%;
+    height: 100%;
+}
+.section{
+    cursor: pointer;
+}
+.section:hover{
+    opacity: 0.7;
+}
+.visitar{
+    fill: green;
+}
+.porVisitar{
+ fill: gray;
+}
+.visitado{
+
+}

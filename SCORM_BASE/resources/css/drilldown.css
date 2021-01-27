@@ -1,0 +1,31 @@
+/*Dropdown*/
+.clase1 {
+    list-style: none;
+}
+.subLista1{
+    display: none;
+}
+.subLista2{
+    list-style: disc;
+}
+.contenedor-dropdown {
+    background-color: #5f2167;
+    color: white;
+    border-radius: 30px;
+}
+.marginEm{
+    margin-left: 1.25em;
+}
+.principalSimple, .principalSimple1, .subSimple{
+    padding: .5em;
+    cursor: pointer;
+}
+.vistoDrop{
+    background-color: #98679e !important;
+    color: white !important;
+}
+@media (max-width: 768px){
+    .rowMobil{
+        margin-top: 1em;
+    }
+}

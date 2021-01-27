@@ -1,0 +1,240 @@
+.tamañoboton:hover {
+  background: white;
+  border-color: #DA291C;
+  color: #DA291C;
+}
+
+.tamañoboton {
+  width: 13em;
+  font-size: 1em;
+  background: white;
+  border-color: #5F2167;
+  color: #5F2167;
+}
+
+.Inicio {
+  background: #5F2167;
+  color: white
+}
+
+.pBtn {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.caso {
+  text-align: center;
+  margin-top: 1.5em;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.img {
+  background: url("../img/caso1.jpg");
+  background-position-x: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media (max-width: 575.98px) { 
+  body {
+      font-family: RamsL;
+      font-size: 16px;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 16px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 18px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 20px;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) and (max-width: 1423.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1424px) and (max-width: 1649.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1650px) and (max-width: 1744.98px) {
+  body {
+    font-family: RamsL;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1745px) {
+  body {
+    font-family: RamsL;
+    font-size: 35px;
+  }
+}
+
+.instrucciones {
+  text-align: justify;
+  font-size: 1em !important;
+  font-weight: normal !important;
+  font-family: RamsL;
+}
+
+.tableMoney {
+  font-size: 0.8em;
+  width: 40vw;
+}
+
+.tableMoney thead th {
+  text-align: center;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgb(125 125 125 / 81%);
+}
+
+/*.table-striped tbody tr:nth-of-type(even) {
+    color: white !important;
+}*/
+
+.tableMoney td, .tableMoney th {
+  padding: 0.1em;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.Element {
+  font-weight: bold;
+}
+
+.card-header {
+  padding: 0px;
+  font-size: 1em;
+}
+
+.btnCollapseMA {
+  width: 100%;
+  background: #5f2167b6;
+  color: white;
+  outline: none;
+}
+
+.btnCollapseMA:hover {
+  width: 100%;
+  background: #5f216783;
+  color: white;
+}
+
+.card-body {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.parrafo-Flotante2 {
+  font-size: 0.7em;
+  width: 40%;
+  position: absolute;
+  left: 60%;
+  top: 0;
+}
+
+.card {
+  position: absolute;
+  z-index: 1000;
+  color: black;
+}
+
+.rowMoney {
+  margin-bottom: 2em;
+}
+
+#accordion {
+  margin-bottom: 1em;
+}
+
+#collapseOne {
+  padding: 1em;
+}
+
+.parpadea {
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes parpadeo {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .modal-content{
+       font-size: 22px !important;
+       text-align: center !important;
+  } 
+}

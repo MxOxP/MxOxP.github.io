@@ -1,0 +1,444 @@
+@font-face {
+    font-family: Rams;
+    src: url("../tipoGrafia/Rams.otf");
+}
+
+@font-face {
+    font-family: RamsL;
+    src: url("../tipoGrafia/RamsLigth.otf");
+}
+
+html {
+    scrollbar-width: none;
+}
+
+header {
+    background: #5f2167;
+    color: white;
+}
+
+.margenFooter {
+    /* padding: .3em .5em .3em .5em; */
+    /* padding: .25em .5em .25em .5em; */
+    padding: .35em .6em .35em .6em;
+}
+
+.margenHeader {
+    padding: .57em .71em .57em .71em;
+}
+
+.headMobil {
+    background: #5F2167;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    height: 2.8em;
+}
+
+.logoMobility {
+    width: 3.5em;
+}
+
+.logoCec {
+    width: 3.5em;
+}
+
+.body {
+    margin-top: .5em;
+    margin-bottom: 3.3em;
+}
+
+.footer {
+    background: #5F2167;
+    color: white;
+    height: 2.8em;
+}
+
+.btnNavegacion {
+    width: 2.14em;
+    height: 2.14em;
+    cursor: pointer;
+}
+
+.footerCentro {
+    text-align: center;
+}
+
+.btnDraw {
+    cursor: pointer;
+    width: 2.42em;
+}
+
+.progressBar {
+    background-color: #DA291C;
+    border-radius: .19em;
+    height: .28em;
+    max-height: .3em;
+    width: 75%;
+    margin-bottom: 2.65em;
+    z-index: 1031;
+}
+
+.btnAdelante {
+    opacity: 0;
+    /* transition: 2s; */
+}
+
+.quitaPadding {
+    padding: 0;
+}
+
+/*.body{
+    padding-left: .5em;
+}*/
+
+.textoSubtitulo {
+    color: #5F2167;
+    font-size: 1.3em;
+    font-family: Rams;
+}
+
+.enfasis {
+    color: #DA291C;
+}
+
+.muyImportante {
+    font-size: 1.53em;
+}
+
+.colorMorado {
+    color: #5F2167;
+}
+
+.marginIOS {
+    padding: .05em .6em .05em .6em !important;
+}
+
+.textBorder {
+    border-bottom: .15em solid #DA291C;
+}
+
+.padding-Titulo {
+    padding-left: 2em;
+}
+
+.LabelTitulo {
+    font-size: 1.3em;
+    font-family: Rams;
+}
+
+.rowContenido {
+    margin-top: 1em;
+}
+
+.pCajaResaltada {
+    border-radius: 10px;
+    box-shadow: 0 0 15px #5f2167;
+    background: #ffffff;
+    padding: .7em;
+}
+
+.pCajaResaltadaDialogo {
+    border-radius: 10px;
+    box-shadow: 0 0 15px #5f2167;
+    background: #ffffff;
+    padding: 1em;
+    font-size: 0.6em;
+    width: 90%;
+}
+
+.centroHorizontal {
+    text-align: center;
+}
+
+.contenidoSimulador {
+    text-align: center;
+    margin-top: .5em;
+}
+
+.importante {
+    font-size: 1.3em;
+}
+
+.content-body p {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    background: #e2221d;
+    color: white;
+}
+
+.iconDrawer {
+    padding: .2em;
+    background: #5f2167;
+}
+
+.links {
+    color: #DA291C;
+    text-decoration: underline;
+}
+
+.imagenModal {
+    width: 10em;
+}
+
+.espacio {
+    margin-top: 1.25em !important;
+}
+
+.espacioPortada {
+    margin-top: 1.85em;
+}
+
+.body .imagenes {
+    width: 2em;
+    height: 2em;
+}
+
+.btn-ado {
+    border: 2px solid #5f2167;
+    background-color: #5f2167;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.btn-ado:hover {
+    color: #DA291C;
+}
+
+.bg-red {
+    background-color: #DA291C;
+}
+
+.img-adicional {
+    width: 3em;
+    height: 3em;
+}
+
+.icono {
+    width: 3em;
+    height: 3em;
+}
+
+.image-fixed {
+    position: fixed;
+    bottom: 2em;
+}
+
+@media (max-width: 575.98px) {
+    body {
+        font-family: Rams;
+        font-size: 20px;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body {
+        font-family: Rams;
+        font-size: 20px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        font-family: Rams;
+        font-size: 22px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body {
+        font-family: Rams;
+        font-size: 22px;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) and (max-width: 1423.98px) {
+    body {
+        font-family: Rams;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1424px) and (max-width: 1649.98px) {
+    body {
+        font-family: Rams;
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1650px) and (max-width: 1744.98px) {
+    body {
+        font-family: Rams;
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1745px) {
+    body {
+        font-family: Rams;
+        font-size: 35px;
+    }
+    .logoCec {
+        width: 3.4em;
+    }
+}
+
+@media (max-width: 575.98px) and (orientation: landscape) {
+    body {
+        font-size: 15px !important;
+    }
+    header {
+        margin-top: -1px;
+    }
+}
+
+@media (max-width: 575.98px) {}
+
+@media (max-width: 767.98px) {
+    body {
+        font-size: 20px;
+    }
+    header {
+        margin-top: -1px;
+    }
+}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 1199.98px) {}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/*Soporte para títulos largos*/
+
+@supports (-webkit-touch-callout: none) {
+    /* iOS */
+    @media all and (orientation: portrait) {
+        .longHeader {
+            height: 6.8em !important;
+        }
+    }
+    @media all and (orientation:landscape) {
+        .longHeader {
+            height: 4.8em !important;
+        }
+    }
+}
+
+@supports not (-webkit-touch-callout: none) {
+    /* noiOS */
+    @media all and (orientation: portrait) {
+        .longHeader {
+            height: 6.1em !important;
+        }
+    }
+    @media all and (orientation:landscape) {
+        .longHeader {
+            height: 4.1em !important;
+        }
+    }
+}
+
+.rounded {
+    border-radius: 0.5em!important;
+}
+
+.listaEstandar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.listaEstandar>li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+.listaEstandar>li::before {
+    content: "• " !important;
+    color: red !important;
+    /* or whatever color you prefer */
+}
+
+.listaEstandarB {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.listaEstandarB>li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+.listaEstandarB>li::before {
+    content: "•  " !important;
+    color: white !important;
+    /* or whatever color you prefer */
+}
+
+tbody {
+    text-align: center;
+}
+
+.listaEstandarC {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.listaEstandarC>li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+.listaEstandarC>li::before {
+    content: "▪︎  " !important;
+    color: white !important;
+    /* or whatever color you prefer */
+}
+
+.importanteBtn {
+    width: 4em;
+    height: 4em;
+    cursor: pointer;
+}
+
+.importanteBtn:hover {
+    opacity: 0.8;
+}
+
+.LabelTitulo>label {
+    text-align: center;
+}
+.modal-body > p{
+    text-align: center;
+}
+@media (max-width: 575.98px) {
+    body {
+        font-size: 15px !important;
+    }
+    .logoCec {
+        width: 3.4em;
+    }
+}
