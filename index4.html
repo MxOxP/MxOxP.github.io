@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+    	<meta name="viewport" content="height=device-height,initial-scale=1">
+		<style>
+			#over{
+				width: 500px;
+				height: 500px;
+				overflow: scroll;
+				margin: 0 auto;
+			}
+			/*#zoom{
+				width: 400px;
+				height: 400px;
+			} */
+
+			button{
+				width: 80px;
+				height: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<button id="mas"> + </button>
+		<button id="men"> - </button>
+		<div id="over">
+			<img id="zoom" src="https://tecnovortex.com/wp-content/uploads/2019/04/wallpaper-engine.jpg"/>
+		</div>
+
+		<script>
+			let siu2 = document.getElementById("zoom");
+			console.log(siu2);
+			console.log(siu2.style);
+			let width = 500;
+			let height = 400;
+
+			window.onload = function(){
+				let imgs = document.getElementById("zoom");
+				imgs.height = 400;
+				imgs.width = 500;
+			}
+			let butmas = document.getElementById("mas");
+			butmas.addEventListener("click", function(){
+				let siu = document.getElementById("zoom");
+				width = width * 1.1;
+				height = height * 1.1;
+				siu.width = width;
+				siu.height = height;
+
+			});
+
+			let butmen = document.getElementById("men");
+			butmen.addEventListener("click", function(){
+				let siu = document.getElementById("zoom");
+				width = width * 0.9;
+				height = height * 0.9;
+				siu.width = width;
+				siu.height = height;
+			});
+		</script>
+	</body>
+</html>
