@@ -898,6 +898,69 @@ let pool = [
             "Goleador Dorado",
             "Balón de Oro"
         ],
+    },
+    {
+        "preg": "¿Cuántos goles anotó Pelé en su historia en los Mundiales?",
+        "res": [
+            "12",
+            "20",
+            "10",
+            "15"
+        ],
+    },
+    {
+        "preg": "Nombre de la Mascota oficial para el Mundial de México 1986",
+        "res": [
+            "Pique",
+            "Ciao",
+            "Naranjito",
+            "Juanito"
+        ],
+    },
+    {
+        "preg": "¿Quién es el jugador latinoamericano con más goles en un Mundial?",
+        "res": [
+            "Ronaldo Nazario",
+            "Armando Maradona",
+            "Gabriel Batistuta",
+            "Pelé"
+        ],
+    },
+    {
+        "preg": "¿Cuál es la capital de México?",
+        "res": [
+            "Ciudad de Méxicano",
+            "Manuel Neuer",
+            "Keylor Navas",
+            "Guilermo Ochoa"
+        ],
+    },
+    {
+        "preg": "¿Qué jugador le pegó un cabezazo a un contrario en la final del Mundial Alemania 2006?",
+        "res": [
+            "Zinedine Zidane",
+            "Mauro Camoranesi",
+            "Gattuso",
+            "Materazzi"
+        ],
+    },
+    {
+        "preg": "¿Qué nombre recibe la confederación Sudamericana de Futbol?",
+        "res": [
+            "Conmebol",
+            "Concacaf",
+            "American Football",
+            "UEFA"
+        ],
+    },
+    {
+        "preg": "Autor de El Quijote",
+        "res": [
+            "Miguel de Cervantes Saavedra",
+            "Juan Rulfo",
+            "Jorge Luis Borges",
+            "Edgar Allan Poe"
+        ],
     }
 ];
 
