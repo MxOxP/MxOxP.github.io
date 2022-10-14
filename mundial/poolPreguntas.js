@@ -1022,7 +1022,7 @@ let pool = [
             "XVI",
             "XVIII",
             "XV",
-            "XVII5"
+            "XVII"
         ],
     }
 ];
