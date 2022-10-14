@@ -844,6 +844,60 @@ let pool = [
             "Pinocho",
             "La Cenicienta"
         ],
+    },
+    {
+        "preg": "¿Cuántas Copas del Mundo ha ganado Inglaterra?",
+        "res": [
+            "1",
+            "3",
+            "2",
+            "0"
+        ],
+    },
+    {
+        "preg": "Nombre de la mascota oficial para el Mundial de España 1982",
+        "res": [
+            "Naranjito",
+            "Pique",
+            "Fuleco",
+            "Juanito"
+        ],
+    },
+    {
+        "preg": "¿Cuántos goles anotó Ronaldo Nazario en Copas del Mundo?",
+        "res": [
+            "15",
+            "9",
+            "10",
+            "20"
+        ],
+    },
+    {
+        "preg": "¿Cuántas Copas del Mundo se han disputado en México",
+        "res": [
+            "2",
+            "0",
+            "1",
+            "4"
+        ],
+    },
+    {
+        "preg": "¿Cuántos goles marcó Diego Maradona en México 1986",
+        "res": [
+            "5",
+            "8",
+            "10",
+            "2"
+        ],
+    },
+    {
+        "preg": "¿Qué nombre recibe el premio entregado al mayor goleador del Mundial?",
+        "res": [
+            "Bota de Oro",
+            "MVP",
+            "Goleador Dorado",
+            "Balón de Oro"
+        ],
     }
 ];
 
