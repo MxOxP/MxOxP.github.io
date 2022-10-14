@@ -42,6 +42,7 @@ function magia(){
 $( document ).ready(function() {
 
     magia();
+    console.log(pool.length);
     /*
    $("#formulario .pregunta").each((i,e) => {
 

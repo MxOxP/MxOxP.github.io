@@ -390,7 +390,7 @@ let pool = [
         "preg": "¿En qué estado se encuentra el puerto de Acapulco?",
         "res": [
             "En el Estado de Guerrero",
-            "En el Estado de Guerrero",
+            "En el Estado de México",
             "En Michoacán",
             "En Cuernavaca"
         ],
@@ -650,7 +650,7 @@ let pool = [
     {
         "preg": "¿De qué grupo formaba parte John Lennon?",
         "res": [
-            "The Beatlese",
+            "The Beatles",
             "The Monkeys",
             "The Doors",
             "The Rolling Stones"
