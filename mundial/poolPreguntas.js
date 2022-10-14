@@ -1051,6 +1051,78 @@ let pool = [
             "Argentina",
             "Alemania"
         ],
+    },
+    {
+        "preg": "¿Cuántos campeonatos del Mundo tiene la selección de Uruguay?",
+        "res": [
+            "2",
+            "0",
+            "1",
+            "3"
+        ],
+    },
+    {
+        "preg": "¿Cómo se llama al resultado de una multiplicación?",
+        "res": [
+            "Producto",
+            "Cociente",
+            "Raíz Cuadrada",
+            "Resultado"
+        ],
+    },
+    {
+        "preg": "¿Qué país fue el ganador del Mundial Sudáfrica 2010?",
+        "res": [
+            "España",
+            "Italia",
+            "Alemania",
+            "Brasil"
+        ],
+    },
+    {
+        "preg": "¿Quién es el fundador de Meta?",
+        "res": [
+            "Mark Zuckerberg",
+            "Carlos Slim",
+            "Henry Ford",
+            "Jeff Bezos"
+        ],
+    },
+    {
+        "preg": "¿Qué país fue el ganador del Mundial México 1986?",
+        "res": [
+            "Argentina",
+            "Brasil",
+            "Italia",
+            "México"
+        ],
+    },
+    {
+        "preg": "¿Qué país ganó la Copa del Mundo en 1998 ante su público local?",
+        "res": [
+            "Francia",
+            "Brasil",
+            "Uruguay",
+            "Argentina"
+        ],
+    },
+    {
+        "preg": "¿Cuál es el país más grande?",
+        "res": [
+            "Rusia",
+            "Alaska",
+            "Arabia Saudita",
+            "Estados Unidos"
+        ],
+    },
+    {
+        "preg": "¿Quién es el jugador mexicano con más goles en un Mundial?",
+        "res": [
+            "Luis Herández",
+            "Javier 'Chicharito' Hernández",
+            "Luis Roberto Alves",
+            "Enrique Borja"
+        ],
     }
 ];
 
