@@ -698,7 +698,7 @@ let pool = [
             "Jorge Campos",
             "Guillermo Ochoa",
             "Oswaldo Sánchez",
-            "Óscr Pérez"
+            "Óscar Pérez"
         ],
     },
     {
