@@ -1024,6 +1024,33 @@ let pool = [
             "XV",
             "XVII"
         ],
+    },
+    {
+        "preg": "¿Cuántos goles anotó Miroslav Klose en Copas del Mundo?",
+        "res": [
+            "16",
+            "15",
+            "20",
+            "10"
+        ],
+    },
+    {
+        "preg": "¿Qué nombre tenía el balón con el que se jugó el Mundial Brasil 2014?",
+        "res": [
+            "Brazuca",
+            "Gaser",
+            "Rihla",
+            "Balonsino"
+        ],
+    },
+    {
+        "preg": "¿Qué país fue el ganador del Mundial México 1970?",
+        "res": [
+            "Brasil",
+            "México",
+            "Argentina",
+            "Alemania"
+        ],
     }
 ];
 
