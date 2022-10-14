@@ -961,6 +961,69 @@ let pool = [
             "Jorge Luis Borges",
             "Edgar Allan Poe"
         ],
+    },
+    {
+        "preg": "¿Quién ha protagonizado la saga de Indiana Jones",
+        "res": [
+            "Harrison Ford",
+            "Al Pacino",
+            "Bruce Willis",
+            "Leonardo Dicaprio"
+        ],
+    },
+    {
+        "preg": "Año de la Revolución Francesa",
+        "res": [
+            "1789",
+            "1987",
+            "1800",
+            "1777"
+        ],
+    },
+    {
+        "preg": "¿Qué escritor mexicano obtuvo el Premio Nobel de literatura en 1990?",
+        "res": [
+            "Octavio Paz",
+            "José Emilio Pacheco",
+            "Carlos Fuentes",
+            "Laura esquivel"
+        ],
+    },
+    {
+        "preg": "¿Quién pintó 'la última cena'?",
+        "res": [
+            "Leonardo DaVinci",
+            "Miguel Ángel",
+            "Francisco de Goya",
+            "Salvador Dalí"
+        ],
+    },
+    {
+        "preg": "¿Qué países han anotado más autogoles en un Mundial?",
+        "res": [
+            "Bulgaria, España y México",
+            "Colombia y Corea del Sur",
+            "Chile y Argentina",
+            "Perú, Costa Rica y Alemania"
+        ],
+    },
+    {
+        "preg": "¿Qué jugador anotó el primer gol en una Copa del Mundo?",
+        "res": [
+            "Lucien Laurent",
+            "Felipe Rosas",
+            "Luis Acosta",
+            "Marcel Capelle"
+        ],
+    },
+    {
+        "preg": "¿En qué siglo llegaron los conquistadores españoles a México?",
+        "res": [
+            "XVI",
+            "XVIII",
+            "XV",
+            "XVII5"
+        ],
     }
 ];
 
