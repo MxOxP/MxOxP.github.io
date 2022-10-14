@@ -1,0 +1,320 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+
+
+/*Nav*/
+
+.bgNav {
+    background-color: #002518;
+}
+
+header {
+    background-color: #002518;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255 255 255 / 55%);
+}
+
+
+/*Hero*/
+
+.hero {
+    background-image: url(hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: aliceblue;
+    border: 0;
+    opacity: .25;
+}
+
+
+/*MecÃ¡nica*/
+
+.whats {
+    margin-top: 75px;
+}
+
+.boton-whatsapp {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00bb2d!important;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 1em!important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .75);
+    color: #fff!important;
+    padding: 10px 21px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.boton-whatsapp:hover {
+    background: #455a64!important;
+}
+
+.boton-whatsapp:before {
+    content: "\f232";
+    /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    font-weight: normal;
+    text-shadow: none;
+    display: inline-block;
+    vertical-align: sub;
+    font-size: 2em;
+    margin: 0;
+    width: 1.2em;
+}
+
+
+/*Premios*/
+
+.img_hero2 {
+    max-width: 550px;
+    margin: 10px 0 40px 0;
+}
+
+.sis {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .img_hero2 {
+        max-width: 450px;
+        margin: 10px 0 40px 0;
+    }
+    .whats {
+        margin-top: 15px;
+    }
+}
+
+
+/*Ganadores*/
+
+h3,
+.text-ganador {
+    color: white;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #002518;
+    padding: 20px 0 20px 0;
+}
+
+.rig {
+    text-align: right !important;
+    margin-right: 70px;
+}
+
+@media (max-width: 1400px) {
+    .rig {
+        text-align: right !important;
+        margin-right: 38px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .rig {
+        text-align: right !important;
+        margin-right: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .rig {
+        text-align: right !important;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 760px) {
+    .rig {
+        text-align: right !important;
+        margin-right: 91px;
+    }
+}
+
+@media (max-width: 488px) {
+    .rig {
+        text-align: right !important;
+        margin-right: 40px;
+    }
+}
+
+
+/*Arthur Styles*/
+
+.text-ganador {
+    line-height: 1.3;
+    font-size: 25px;
+}
+
+.cont-img-viaje {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-premio {
+    width: 80%;
+    margin-top: -20px;
+}
+
+@media only screen and (max-width: 990px) {
+    .text-ganador {
+        font-size: 18px;
+    }
+}
+
+.poppy {
+    width: 100%;
+}
+
+.poppy img {
+    width: 70px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-whats {
+    width: 350px;
+}
+
+.petaloLogo {
+    width: 120px;
+}
+
+.modal-body {
+    height: 400px !important;
+}
+
+.frame {
+    overflow: hidden !important;
+}
+
+.contacto-modal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-modal {
+    text-align: center;
+}
+
+.num {
+    font-size: 25px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Countdown */
+
+.cont-clock {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.clock-box {
+    width: 70px;
+    height: 80px;
+    background-color: #ffd166;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 10px;
+    /*Sombra*/
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+}
+
+.clock-separation {
+    width: 20px;
+    height: 80px;
+    font-size: 40px;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 435px) {
+    .cont-clock {
+        font-size: 10px;
+    }
+    .clock-box {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .clock-separation {
+        width: 15px;
+        height: 80px;
+        font-size: 40px;
+        font-family: 'Rubik', sans-serif;
+        text-align: center;
+        position: relative;
+        margin-top: 3px;
+    }
+    .text-participa {
+        font-size: 18px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.cont-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.titulo-crono {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #be171a;
+}
+
+.text-crono {
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
