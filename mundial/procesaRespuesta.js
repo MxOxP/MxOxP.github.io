@@ -18,7 +18,7 @@ $(".envia").click(()=>{
     
     });
 
-    console.log($(".modal-body").text("Respuestas correctas: " + conteoBuenas + " Tiempo: " + h1.textContent));
+    console.log($(".modal-body").text("Registro correcto, " + conteoBuenas + " respuestas correctas en " + h1.textContent));
     $('#myModal').modal('show');
 });
 

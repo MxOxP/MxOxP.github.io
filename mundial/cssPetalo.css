@@ -9,6 +9,33 @@ body {
 
 /*Nav*/
 
+.form-check .form-check-input {
+    float: left !important;
+    margin-left: -1.5em !important;
+}
+
+.radioButton {
+    float: left !important;
+    margin-left: -1.5em !important;
+    margin-top: 0.25em !important;
+    border-style: solid;
+    border-width: 1px;
+    border: 1px solid rgba(68, 40, 40, 0.25) !important;
+    border-radius: 50%;
+    width: 1em !important;
+    height: 1em !important;
+}
+
+.spbutton{
+    background-color: #BE171A !important;
+    border-color: #691618 !important;
+    color: white !important;
+}
+
+label{
+    margin-bottom: 0px;
+}
+
 .bgNav {
     background-color: #002518;
 }

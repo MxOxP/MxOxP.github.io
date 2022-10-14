@@ -1,4 +1,4 @@
-let h1 = document.getElementsByTagName('h1')[0];
+let h1 = document.getElementById('reloj');
 let sec = 0;
 let min = 0;
 let hrs = 0;
