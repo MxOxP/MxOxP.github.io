@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<script src="Todo/jquery-3.5.1.min.js"></script>-->
     <script src="mundial/jquery-3.5.1.min.js"></script>
-    <script src="mundial/poolPreguntas.js"></script>
+    <script src="mundial/poolPreguntasjs"></script>
     <script src="mundial/mundialScript.js"></script>
-    <script src="mundial/bootstrap.min.js"></script>
-    <script src="mundial/bootbox.js"></script>
 
     <title>Mundial</title>
     <script>
@@ -17,10 +15,25 @@
 </head>
 <body>
     <div class ="main">
-
-        <h1><time>00:00:00</time></h1>
-        <!--<h1><p id ="reloj" >00:00:00</p></h1>-->
-
+        <!--
+        <div>
+            <input type="radio"  value="choice-1" id="choice-2">
+            <input type="radio"  value="choice-2" id="choice-2">
+            <input type="radio"  value="choice-3" id="choice-2">
+            <input type="radio"  value="choice-4" id="choice-2">
+        </div>
+    -->
+        <!---
+        <div>
+            Choose:
+            <div><input type="radio" name="choice" value="choice-1" id="choice-1" checked>
+              <label for="choice-1">Choice 1</label></div>
+            <div><input type="radio" name="choice" value="choice-2" id="choice-2">
+              <label for="choice-2">Choice 2</label></div>
+            <div><input type="radio" name="choice" value="choice-3" id="choice-3">
+              <label for="choice-3">Choice 3</label></div>
+          </div>
+        -->
         <div id="formulario">
             <div class = "pregunta">
                 <p class ="textoq">Please select your favorite Web languq2:</p>
@@ -152,20 +165,6 @@
             <br>
         </div>
     </div>
-
-    <div class="envia">Enviar</div>
-    <style>
-        .envia{
-            border: 1px solid black;
-            width: 50px;
-            padding: 2px;
-            cursor: pointer;
-        }
-    </style>
-
-    <script src="mundial/relojScript.js"></script>
-    <script src="mundial/procesaRespuesta.js"></script>
-
 </body>
 
 </html>
