@@ -198,7 +198,7 @@ let pool = [
         ],
     },
     {
-        "preg": "¿En dónde se organizó la segundO Copa del Mundo de la Historia",
+        "preg": "¿En dónde se organizó la segundo Copa del Mundo de la Historia",
         "res": [
             "Italia 1934",
             "Argentina 1934",
@@ -320,7 +320,7 @@ let pool = [
             "8",
             "10",
             "4",
-            "8"
+            "6"
         ],
     },
     {
@@ -459,7 +459,7 @@ let pool = [
         ],
     },
     {
-        "preg": "¿Cuál fue la última Copa del Mundi que ganó Italia?",
+        "preg": "¿Cuál fue la última Copa del Mundo que ganó Italia?",
         "res": [
             "Alemania 2006",
             "Francia 1998",
@@ -488,9 +488,9 @@ let pool = [
     {
         "preg": "¿Qué nombre recibe la confederación Europea de Futbol?",
         "res": [
-            "Concacaf",
-            "Europa Nation",
             "UEFA",
+            "Europa Nation",
+            "Concacaf",
             "Conmebol"
         ],
     },
@@ -564,6 +564,285 @@ let pool = [
             "Tres",
             "Seis",
             "Doce"
+        ],
+    },
+    {
+        "preg": "¿En qué estadio se jugo la final del Mundial Inglaterra 1966?",
+        "res": [
+            "Wembley",
+            "Old Trafford",
+            "London Ville",
+            "Anfield"
+        ],
+    },
+    {
+        "preg": "Nombre que recibe el árbitro asistente en video",
+        "res": [
+            "VAR",
+            "Cámara Escondida",
+            "Asistencia Digital",
+            "Árbitro Virtual"
+        ],
+    },
+    {
+        "preg": "¿Qué países disputaron la final de Alemania 2006?",
+        "res": [
+            "Italia y Francia",
+            "Croacia y Argentina",
+            "Francia y España",
+            "Brasil y Argentina"
+        ],
+    },
+    {
+        "preg": "¿En qué Mundial México ganó su primer partido?",
+        "res": [
+            "Chile 1962",
+            "Italia 1990",
+            "España 1982",
+            "Italia 1934"
+        ],
+    },
+    {
+        "preg": "¿Qué pais será la sede de la Copa del Mundo en 2022?",
+        "res": [
+            "Catar",
+            "Brasil",
+            "USA",
+            "Francia"
+        ],
+    },
+    {
+        "preg": "¿Qué selección centroamericana llegó a cuartos de final en Brasil 2014?",
+        "res": [
+            "Costa Rica",
+            "México",
+            "Honduras",
+            "Guatemala"
+        ],
+    },
+    {
+        "preg": "¿Qué jugador hizo la famosa jugada 'La mano de Dios'?",
+        "res": [
+            "Diego Maradona",
+            "Pelé",
+            "Justin Fontaine",
+            "Gabriel Batistuta"
+        ],
+    },
+    {
+        "preg": "¿Cuántas notas musicales existen?",
+        "res": [
+            "Doce",
+            "Trece",
+            "Seis",
+            "Cuatro"
+        ],
+    },
+    {
+        "preg": "¿Dónde se realizó la primer Copa del Mundo femenil?",
+        "res": [
+            "China",
+            "Suecia",
+            "Estados Unidos",
+            "México"
+        ],
+    },
+    {
+        "preg": "¿De qué grupo formaba parte John Lennon?",
+        "res": [
+            "The Beatlese",
+            "The Monkeys",
+            "The Doors",
+            "The Rolling Stones"
+        ],
+    },
+    {
+        "preg": "¿En qué año Francia logró su segundo campeonato de Copa del Mundo?",
+        "res": [
+            "2018",
+            "2002",
+            "2014",
+            "1998"
+        ],
+    },
+    {
+        "preg": "¿Cuál fue la última Copa del Mundo que ganó Brasil?",
+        "res": [
+            "Corea-Japón 2002",
+            "USA 1994",
+            "Rusia 2018",
+            "Alemania 2006"
+        ],
+    },
+    {
+        "preg": "¿Cuántos anillos hay en la bandera olímpica?",
+        "res": [
+            "Cinco",
+            "Seis",
+            "Cuatro",
+            "Ocho"
+        ],
+    },
+    {
+        "preg": "De los cinco sentidos, ¿cuál es el que se desarolla primero?",
+        "res": [
+            "El olfato",
+            "El gusto",
+            "El tacto",
+            "La vista"
+        ],
+    },
+    {
+        "preg": "¿Quién era el portero titula de México en el Mundial Francia 1998?",
+        "res": [
+            "Jorge Campos",
+            "Guillermo Ochoa",
+            "Oswaldo Sánchez",
+            "Óscr Pérez"
+        ],
+    },
+    {
+        "preg": "¿Cuántos lados tiene un heptadecágono?",
+        "res": [
+            "Diecisete",
+            "Trece",
+            "Catorce",
+            "Diez"
+        ],
+    },
+    {
+        "preg": "¿Cuál es el animal más rápido del mundo?",
+        "res": [
+            "El guepardo",
+            "Mapache",
+            "El correcaminos",
+            "Canguro"
+        ],
+    },
+    {
+        "preg": "¿Cuál es la velocidad de la luz?",
+        "res": [
+            "300.000 kilómetros por segundo",
+            "900.000 kilómetros por segundo",
+            "200.000 kilómetros por segundo",
+            "100.000 kilómetros por segundo"
+        ],
+    },
+    {
+        "preg": "¿Qué animal fue la mascota del Mundial Sudáfrica 2010?",
+        "res": [
+            "Leopardo",
+            "Gato",
+            "León",
+            "Tigre"
+        ],
+    },
+    {
+        "preg": "¿Cuál era el nombre de pila de Che Guevara?",
+        "res": [
+            "Ernesto",
+            "Manuel",
+            "Javier",
+            "Andrés"
+        ],
+    },
+    {
+        "preg": "¿Qué nombre recibe la confederación de Centro y Norte América de Futbol?",
+        "res": [
+            "Concacaf",
+            "Conmebol",
+            "American Football",
+            "UEFA"
+        ],
+    },
+    {
+        "preg": "¿Cuántos elementos hay en la Tabla Periódica?",
+        "res": [
+            "118",
+            "140",
+            "120",
+            "150"
+        ],
+    },
+    {
+        "preg": "¿Cuál es la moneda oficial de Japón?",
+        "res": [
+            "El yen",
+            "El dólar",
+            "El sol",
+            "El euro"
+        ],
+    },
+    {
+        "preg": "¿Cuál fue la primer final en la Copa del Mundo?",
+        "res": [
+            "Uruguay vs Argentina",
+            "Argentina vs Brasil",
+            "Alemania vs Inglaterra",
+            "Argentina vs Francia"
+        ],
+    },
+    {
+        "preg": "¿Cuál es el apellido de la reina Isabel II de Inglaterra?",
+        "res": [
+            "Windsor",
+            "Weber",
+            "Fox",
+            "Newton"
+        ],
+    },
+    {
+        "preg": "¿Qué jugador ganó el Balón de Oro en el Mundial de Brasil 2014?",
+        "res": [
+            "Lionel Messi",
+            "Wesley Sneijder",
+            "Thomas Muller",
+            "Arjen Robben"
+        ],
+    },
+    {
+        "preg": "Año en que se inventó la imprenta.",
+        "res": [
+            "1440",
+            "1432",
+            "1940",
+            "1420"
+        ],
+    },
+    {
+        "preg": "¿Quién es el jugador más longevo en disputar un partido de Copa del Mundo?",
+        "res": [
+            "Essam El-Hadary",
+            "Jorge Campos",
+            "Manuel Neuer",
+            "Miroslav Klose"
+        ],
+    },
+    {
+        "preg": "¿Cuál es el planeta más grande del Sistema Solar?",
+        "res": [
+            "Júpiter",
+            "Urano",
+            "Saturno",
+            "Tierra"
+        ],
+    },
+    {
+        "preg": "¿En qué país se jugó en mundial en 1994",
+        "res": [
+            "Estados Unidos",
+            "Brasil",
+            "Canadá",
+            "Chile"
+        ],
+    },
+    {
+        "preg": "¿Cuál fue la primera película de Disney?",
+        "res": [
+            "Blancanieves y los siete enanitos",
+            "El rey león",
+            "Pinocho",
+            "La Cenicienta"
         ],
     }
 ];
