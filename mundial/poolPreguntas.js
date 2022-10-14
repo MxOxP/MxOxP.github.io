@@ -930,9 +930,9 @@ let pool = [
         "preg": "¿Cuál es la capital de México?",
         "res": [
             "Ciudad de México",
-            "Manuel Neuer",
-            "Keylor Navas",
-            "Guilermo Ochoa"
+            "Monterrey",
+            "Estado de México",
+            "Guadalajara"
         ],
     },
     {
