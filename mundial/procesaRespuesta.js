@@ -18,6 +18,20 @@ $(".envia").click(()=>{
     
     });
 
-    //let h1 = document.getElementsByTagName('h1')[0];
-    bootbox.alert("Respuestas correctas: " + conteoBuenas + " Tiempo: " + h1.textContent);
+    console.log($(".modal-body").text("Respuestas correctas: " + conteoBuenas + " Tiempo: " + h1.textContent));
+    $('#myModal').modal('show');
+});
+
+$("#elreseteo").click(()=>{
+
+    $("#formulario .pregunta").each((i,e) => {
+        let input = e.getElementsByTagName("input");
+        for(let s = 0; s < 4 ; s++){
+            input[s].checked = false;
+        }   
+    });
+
+    $('#myModal').modal('hide');
+    magia();
+    reset();
 });

@@ -26,4 +26,9 @@ function timer() {
     t = setTimeout(add, 1000);
 }
 
+function reset() {
+    h1.textContent = "00:00:00";
+    sec = 0; min = 0; hrs = 0;
+}
+
 timer();
