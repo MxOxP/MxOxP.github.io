@@ -171,7 +171,7 @@ let pool = [
         ],
     },
     {
-        "preg": "Nombre de a Mascota oficial para el Mundial de México 1970",
+        "preg": "Nombre de la Mascota oficial para el Mundial de México 1970",
         "res": [
             "Juanito",
             "Naranjito",
@@ -1136,10 +1136,10 @@ let pool = [
     {
         "preg": "Nombre de la primera civilización humana.",
         "res": [
-            "Grecia",
+            "La civilización sumeria",
             "Egipto",
             "Mesoportamia",
-            "La civilización sumeria"
+            "Grecia"
         ],
     },
     {
@@ -1354,7 +1354,7 @@ let pool = [
         "res": [
             "La Gran Pirámide de Cholula",
             "La piramide de la Luna",
-            "La pirámide de Cuiicuilco",
+            "La pirámide de Cuicuilco",
             "La pirámide del Sol"
         ],
     }
