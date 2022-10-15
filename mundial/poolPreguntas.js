@@ -1123,6 +1123,240 @@ let pool = [
             "Luis Roberto Alves",
             "Enrique Borja"
         ],
+    },
+    {
+        "preg": "¿Cuántos partidos de Copa del Mundo disputó Diego Maradona?",
+        "res": [
+            "21 partidos",
+            "50 partidos",
+            "15 partidos",
+            "20 partidos"
+        ],
+    },
+    {
+        "preg": "Nombre de la primera civilización humana.",
+        "res": [
+            "Grecia",
+            "Egipto",
+            "Mesoportamia",
+            "La civilización sumeria"
+        ],
+    },
+    {
+        "preg": "¿En qué año nació Salvador Dalí?",
+        "res": [
+            "En 1904",
+            "En 1935",
+            "En 1804",
+            "En 1906"
+        ],
+    },
+    {
+        "preg": "En qué país Brasil se coronó campeón por primera ocasión?",
+        "res": [
+            "Suecia",
+            "Alemania",
+            "México",
+            "Uruguay"
+        ],
+    },
+    {
+        "preg": "¿Qué países disputaron la final de Sudáfrica 2010?",
+        "res": [
+            "Países Bajos y España",
+            "Países Bajos y Francia",
+            "Alemania y Brasil",
+            "Francia y España"
+        ],
+    },
+    {
+        "preg": "¿Cuántos goles marcó Javier 'Chicharito' Hernández en Brasil 2014?",
+        "res": [
+            "1",
+            "0",
+            "3",
+            "5"
+        ],
+    },
+    {
+        "preg": "Montaña más alta del mundo.",
+        "res": [
+            "El Everest",
+            "K2",
+            "Himalaya",
+            "Karakoram"
+        ],
+    },
+    {
+        "preg": "¿En qué estado de México se encuentran las ruinas de Palenque?",
+        "res": [
+            "En Chiapas",
+            "En Jalisco",
+            "En Monterrey",
+            "En Guanajuato"
+        ],
+    },
+    {
+        "preg": "¿Qué animal fue elegido como mascota del Mundial Rusia 2018?",
+        "res": [
+            "Lobo",
+            "Gato",
+            "Tigre",
+            "León"
+        ],
+    },
+    {
+        "preg": "¿Cuál es la mayor goleada en la historia de la Copa del Mundo?",
+        "res": [
+            "Hungría 10 - 1 El Salvador",
+            "Suecia 8 - 0 Cuba",
+            "Alemania 15 - 0 Paraguay",
+            "Brasil 8 - 1 Suecia"
+        ],
+    },
+    {
+        "preg": "¿Cuál fue la asistencia más baja en un partido de Copa del Mundo?",
+        "res": [
+            "300 personas",
+            "3,005 personas",
+            "23,500 personas",
+            "1,500 personas"
+        ],
+    },
+    {
+        "preg": "¿En qué año se llevó a cabo la primer Copa del Mundo?",
+        "res": [
+            "1930",
+            "1935",
+            "1950",
+            "1940"
+        ],
+    },
+    {
+        "preg": "¿Cuánto vale el número pi?",
+        "res": [
+            "3.1416",
+            "3.1415",
+            "4.1416",
+            "3.1412"
+        ],
+    },
+    {
+        "preg": "¿De qué lengua proviene el español?",
+        "res": [
+            "Castellano",
+            "Árabe",
+            "Mandarín",
+            "Inglés"
+        ],
+    },
+    {
+        "preg": "Cuántas veces ha ganado España un Mundial?",
+        "res": [
+            "Una",
+            "Dos",
+            "Tres",
+            "Ninguna"
+        ],
+    },
+    {
+        "preg": "¿Qué jugador fue el ganador del Balón de Oro en el Mundial de Rusia 2018?",
+        "res": [
+            "Luka Modric",
+            "Eden Hazard",
+            "Antoine Griezmann",
+            "Krim Benzema"
+        ],
+    },
+    {
+        "preg": "¿Qué país renunció a ser sede de la Copa del Mundo del año 1986?",
+        "res": [
+            "Colombia",
+            "Brasil",
+            "Canadá",
+            "México"
+        ],
+    },
+    {
+        "preg": "¿Contra qué equipo jugó México su primer partido en la historia de los mundiales?",
+        "res": [
+            "Francia",
+            "Dinamarca",
+            "Italia",
+            "Croacia"
+        ],
+    },
+    {
+        "preg": "¿Cuántos corazones tiene un pulpo?",
+        "res": [
+            "Tres",
+            "Cinco",
+            "Uno",
+            "Dos"
+        ],
+    },
+    {
+        "preg": "¿Cuál fue el partido final en el Mundial México 1970?",
+        "res": [
+            "Brasil - Italia",
+            "Brasil - Argentina",
+            "Francia - Alemania",
+            "México - Italia"
+        ],
+    },
+    {
+        "preg": "¿Cuántos Mundiales jugó Hugo Sánchez",
+        "res": [
+            "3",
+            "4",
+            "2",
+            "5"
+        ],
+    },
+    {
+        "preg": "¿Quién era el portero titular de Italia en el Mundial 1982?",
+        "res": [
+            "Dino Zoff",
+            "Taconni",
+            "Giancarlo Poll",
+            "Pierini Marcelo"
+        ],
+    },
+    {
+        "preg": "Nombre del libro sagrado del Judaísmo.",
+        "res": [
+            "La Torá",
+            "Nuevo Testamento",
+            "La Biblia",
+            "Corán"
+        ],
+    },
+    {
+        "preg": "¿En qué mes del año el Sol está más cerca de la Tierra?",
+        "res": [
+            "Diciembre",
+            "Abril",
+            "Julio",
+            "Marzo"
+        ],
+    },
+    {
+        "preg": "Si dos equipos en fase de grupos empatan en puntos y en diferencia de goles ¿Qué otro aspecto se cuenta?",
+        "res": [
+            "Duelo Directo",
+            "Tiempo Extra",
+            "Penales",
+            "Fair Play"
+        ],
+    },
+    {
+        "preg": "Es la pirámide más grande del mundo en volumen, no en altura, y se encuentra en México.",
+        "res": [
+            "La Gran Pirámide de Cholula",
+            "La piramide de la Luna",
+            "La pirámide de Cuiicuilco",
+            "La pirámide del Sol"
+        ],
     }
 ];
 
